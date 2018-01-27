@@ -258,6 +258,26 @@
                                                                                                                                          
 						</ul>
 				</li>
+				
+				<li><a href="javascript:void(0)" target="mainframe"
+						class="dropdown-toggle"> <i class="icon-desktop"></i> <span
+							class="menu-text"> 评价管理 </span> <b class="arrow icon-angle-down"></b>
+					</a>
+
+						<ul class="submenu">
+                            <li><a href="${pageContext.request.contextPath}/evaluation/course/list.action" target="mainframe"> <i
+									class="icon-double-angle-right"></i> 课程
+							</a></li>
+                            <li><a href="view/student/evaluationinfo/evaluationinfo_list.html" target="mainframe"> <i
+									class="icon-double-angle-right"></i> 学员评价
+							</a></li>
+                            <li><a href="view/student/evaluationinfo/evaluationinfo_list.html" target="mainframe"> <i
+									class="icon-double-angle-right"></i> 教师评价
+							</a></li>
+                                                                                                                                         
+						</ul>
+				</li>
+				
 				</ul>
 				<!-- /.nav-list -->
 

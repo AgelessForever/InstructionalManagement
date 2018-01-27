@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.guigu.instructional.evaluation.mapper.TEvaluationMapper" >
+  <resultMap id="BaseResultMap" type="com.guigu.instructional.po.TEvaluation" >
+    <id column="t_evaluation_id" property="tEvaluationId" jdbcType="INTEGER" />
+    <result column="staff_id" property="staffId" jdbcType="INTEGER" />
+    <result column="student_id" property="studentId" jdbcType="INTEGER" />
+    <result column="course_id" property="courseId" jdbcType="INTEGER" />
+    <result column="t_evaluation_class_attitude" property="tEvaluationClassAttitude" jdbcType="VARCHAR" />
+    <result column="t_evaluation_workontime" property="tEvaluationWorkontime" jdbcType="VARCHAR" />
+    <result column="t_evaluation_bekins" property="tEvaluationBekins" jdbcType="VARCHAR" />
+    <result column="t_ecaluation_extra_evaluate" property="tEcaluationExtraEvaluate" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    t_evaluation_id, staff_id, student_id, course_id, t_evaluation_class_attitude, t_evaluation_workontime, 
+    t_evaluation_bekins, t_ecaluation_extra_evaluate
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.guigu.instructional.po.TEvaluationExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_evaluation
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_evaluation
+    where t_evaluation_id = #{tEvaluationId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_evaluation
+    where t_evaluation_id = #{tEvaluationId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.guigu.instructional.po.TEvaluationExample" >
+    delete from t_evaluation
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.guigu.instructional.po.TEvaluation" >
+    insert into t_evaluation (t_evaluation_id, staff_id, student_id, 
+      course_id, t_evaluation_class_attitude, t_evaluation_workontime, 
+      t_evaluation_bekins, t_ecaluation_extra_evaluate
+      )
+    values (#{tEvaluationId,jdbcType=INTEGER}, #{staffId,jdbcType=INTEGER}, #{studentId,jdbcType=INTEGER}, 
+      #{courseId,jdbcType=INTEGER}, #{tEvaluationClassAttitude,jdbcType=VARCHAR}, #{tEvaluationWorkontime,jdbcType=VARCHAR}, 
+      #{tEvaluationBekins,jdbcType=VARCHAR}, #{tEcaluationExtraEvaluate,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.guigu.instructional.po.TEvaluation" >
+    insert into t_evaluation
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="tEvaluationId != null" >
+        t_evaluation_id,
+      </if>
+      <if test="staffId != null" >
+        staff_id,
+      </if>
+      <if test="studentId != null" >
+        student_id,
+      </if>
+      <if test="courseId != null" >
+        course_id,
+      </if>
+      <if test="tEvaluationClassAttitude != null" >
+        t_evaluation_class_attitude,
+      </if>
+      <if test="tEvaluationWorkontime != null" >
+        t_evaluation_workontime,
+      </if>
+      <if test="tEvaluationBekins != null" >
+        t_evaluation_bekins,
+      </if>
+      <if test="tEcaluationExtraEvaluate != null" >
+        t_ecaluation_extra_evaluate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="tEvaluationId != null" >
+        #{tEvaluationId,jdbcType=INTEGER},
+      </if>
+      <if test="staffId != null" >
+        #{staffId,jdbcType=INTEGER},
+      </if>
+      <if test="studentId != null" >
+        #{studentId,jdbcType=INTEGER},
+      </if>
+      <if test="courseId != null" >
+        #{courseId,jdbcType=INTEGER},
+      </if>
+      <if test="tEvaluationClassAttitude != null" >
+        #{tEvaluationClassAttitude,jdbcType=VARCHAR},
+      </if>
+      <if test="tEvaluationWorkontime != null" >
+        #{tEvaluationWorkontime,jdbcType=VARCHAR},
+      </if>
+      <if test="tEvaluationBekins != null" >
+        #{tEvaluationBekins,jdbcType=VARCHAR},
+      </if>
+      <if test="tEcaluationExtraEvaluate != null" >
+        #{tEcaluationExtraEvaluate,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.guigu.instructional.po.TEvaluationExample" resultType="java.lang.Integer" >
+    select count(*) from t_evaluation
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update t_evaluation
+    <set >
+      <if test="record.tEvaluationId != null" >
+        t_evaluation_id = #{record.tEvaluationId,jdbcType=INTEGER},
+      </if>
+      <if test="record.staffId != null" >
+        staff_id = #{record.staffId,jdbcType=INTEGER},
+      </if>
+      <if test="record.studentId != null" >
+        student_id = #{record.studentId,jdbcType=INTEGER},
+      </if>
+      <if test="record.courseId != null" >
+        course_id = #{record.courseId,jdbcType=INTEGER},
+      </if>
+      <if test="record.tEvaluationClassAttitude != null" >
+        t_evaluation_class_attitude = #{record.tEvaluationClassAttitude,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tEvaluationWorkontime != null" >
+        t_evaluation_workontime = #{record.tEvaluationWorkontime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tEvaluationBekins != null" >
+        t_evaluation_bekins = #{record.tEvaluationBekins,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tEcaluationExtraEvaluate != null" >
+        t_ecaluation_extra_evaluate = #{record.tEcaluationExtraEvaluate,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update t_evaluation
+    set t_evaluation_id = #{record.tEvaluationId,jdbcType=INTEGER},
+      staff_id = #{record.staffId,jdbcType=INTEGER},
+      student_id = #{record.studentId,jdbcType=INTEGER},
+      course_id = #{record.courseId,jdbcType=INTEGER},
+      t_evaluation_class_attitude = #{record.tEvaluationClassAttitude,jdbcType=VARCHAR},
+      t_evaluation_workontime = #{record.tEvaluationWorkontime,jdbcType=VARCHAR},
+      t_evaluation_bekins = #{record.tEvaluationBekins,jdbcType=VARCHAR},
+      t_ecaluation_extra_evaluate = #{record.tEcaluationExtraEvaluate,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.guigu.instructional.po.TEvaluation" >
+    update t_evaluation
+    <set >
+      <if test="staffId != null" >
+        staff_id = #{staffId,jdbcType=INTEGER},
+      </if>
+      <if test="studentId != null" >
+        student_id = #{studentId,jdbcType=INTEGER},
+      </if>
+      <if test="courseId != null" >
+        course_id = #{courseId,jdbcType=INTEGER},
+      </if>
+      <if test="tEvaluationClassAttitude != null" >
+        t_evaluation_class_attitude = #{tEvaluationClassAttitude,jdbcType=VARCHAR},
+      </if>
+      <if test="tEvaluationWorkontime != null" >
+        t_evaluation_workontime = #{tEvaluationWorkontime,jdbcType=VARCHAR},
+      </if>
+      <if test="tEvaluationBekins != null" >
+        t_evaluation_bekins = #{tEvaluationBekins,jdbcType=VARCHAR},
+      </if>
+      <if test="tEcaluationExtraEvaluate != null" >
+        t_ecaluation_extra_evaluate = #{tEcaluationExtraEvaluate,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where t_evaluation_id = #{tEvaluationId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.guigu.instructional.po.TEvaluation" >
+    update t_evaluation
+    set staff_id = #{staffId,jdbcType=INTEGER},
+      student_id = #{studentId,jdbcType=INTEGER},
+      course_id = #{courseId,jdbcType=INTEGER},
+      t_evaluation_class_attitude = #{tEvaluationClassAttitude,jdbcType=VARCHAR},
+      t_evaluation_workontime = #{tEvaluationWorkontime,jdbcType=VARCHAR},
+      t_evaluation_bekins = #{tEvaluationBekins,jdbcType=VARCHAR},
+      t_ecaluation_extra_evaluate = #{tEcaluationExtraEvaluate,jdbcType=VARCHAR}
+    where t_evaluation_id = #{tEvaluationId,jdbcType=INTEGER}
+  </update>
+</mapper>
