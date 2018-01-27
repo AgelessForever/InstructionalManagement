@@ -271,7 +271,7 @@
                             <li><a href="view/student/evaluationinfo/evaluationinfo_list.html" target="mainframe"> <i
 									class="icon-double-angle-right"></i> 学员评价
 							</a></li>
-                            <li><a href="view/student/evaluationinfo/evaluationinfo_list.html" target="mainframe"> <i
+                            <li><a href="${pageContext.request.contextPath}/evaluation/t_evaluation/list.action" target="mainframe"> <i
 									class="icon-double-angle-right"></i> 教师评价
 							</a></li>
                                                                                                                                          

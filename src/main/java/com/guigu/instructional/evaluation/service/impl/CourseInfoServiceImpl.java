@@ -12,21 +12,22 @@ import com.guigu.instructional.po.CourseInfo;
 import com.guigu.instructional.po.CourseInfoExample;
 import com.guigu.instructional.po.CourseInfoExample.Criteria;
 
-@Service("courseInfoServiceImpl")
-public class CourseInfoServiceImpl implements CourseInfoService{
+@Service(value = "courseInfoServiceImpl")
+public class CourseInfoServiceImpl implements CourseInfoService {
 
-	@Resource(name="courseInfoMapper")
+	@Resource(name = "courseInfoMapper")
 	private CourseInfoMapper courseInfoMapper;
-	
+
 	@Override
 	public boolean addCourse(CourseInfo courseInfo) {
-		
-		try {
-			int i = courseInfoMapper.insertSelective(courseInfo);
-			if(i>0) {
-				return true;
-			}
-		} catch (Exception e) {
+
+		if (courseInfo != null) {
+			courseInfo.setCourseState("1");
+		}
+		System.out.println("addServiceImpl---------"+courseInfo);
+		int i = courseInfoMapper.insertSelective(courseInfo);
+		if (i > 0) {
+			return true;
 		}
 		return false;
 	}
@@ -34,44 +35,44 @@ public class CourseInfoServiceImpl implements CourseInfoService{
 	@Override
 	public boolean updateCourse(CourseInfo courseInfo) {
 		
-		try {
-			int i = courseInfoMapper.insertSelective(courseInfo);
-			if(i>0) {
-				return true;
-			}
-		} catch (Exception e) {
+		System.out.println("updateServiceImpl---------"+courseInfo);
+		int i = courseInfoMapper.updateByPrimaryKeySelective(courseInfo);
+		if (i > 0) {
+			return true;
 		}
-		
+
 		return false;
 	}
 
 	@Override
-	public List<CourseInfo> getCourseList(CourseInfo courseInfo) {
-		
+	public List<CourseInfo> getCourseInfoList(CourseInfo courseInfo) {
+
 		CourseInfoExample courseInfoExample = new CourseInfoExample();
-		
+
 		Criteria criteria = courseInfoExample.createCriteria();
-		
-		if(courseInfo!=null) {
-			
-//			if(course.getCourseId()!=null) {
-//				criteria.andCourseIdEqualTo(course.getCourseId());
-//			}
-			
-			if(courseInfo.getCourseName()!=null) {
-				
-				courseInfo.setCourseName("%"+courseInfo.getCourseName()+"%");
+
+		if (courseInfo != null) {
+
+			// if(course.getCourseId()!=null) {
+			// criteria.andCourseIdEqualTo(course.getCourseId());
+			// }
+
+			if (courseInfo.getCourseName() != null) {
+
+				courseInfo.setCourseName("%" + courseInfo.getCourseName() + "%");
 				criteria.andCourseNameLike(courseInfo.getCourseName());
 			}
 			
+//			System.out.println(courseInfo.getCourseName());
+
 		}
 		criteria.andCourseStateEqualTo("1");
-		
+
 		return courseInfoMapper.selectByExample(courseInfoExample);
 	}
 
 	@Override
-	public CourseInfo getCourse(Integer courseId) {
+	public CourseInfo getCourseInfo(Integer courseId) {
 		return courseInfoMapper.selectByPrimaryKey(courseId);
 	}
 

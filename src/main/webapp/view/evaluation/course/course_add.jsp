@@ -18,7 +18,7 @@
  </ul>
 </div>
 	
-	<form action="${pageContext.request.contextPath }/evaluation/course/add.action" method="post" class="form-horizontal">
+	<form action="${pageContext.request.contextPath }/evaluation/course/add.action"  class="form-horizontal">
 
     <h5 class="page-header alert-info" style="padding:10px; margin:0px; margin-bottom:5px;">基本信息</h5>
     

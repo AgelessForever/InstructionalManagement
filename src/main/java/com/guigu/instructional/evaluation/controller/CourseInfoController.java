@@ -20,7 +20,8 @@ public class CourseInfoController {
 	
 	@RequestMapping("list.action")
 	public String list(CourseInfo courseInfo,Model model) {
-		List<CourseInfo> list=courseInfoService.getCourseList(courseInfo);
+//		System.out.println("1111---------"+courseInfo);
+		List<CourseInfo> list=courseInfoService.getCourseInfoList(courseInfo);
 		model.addAttribute("list", list);
 		
 		return "evaluation/course/course_list";
@@ -28,7 +29,7 @@ public class CourseInfoController {
 	
 	@RequestMapping("add.action")
 	public String addCourseInfo(CourseInfo courseInfo,Model model) {
-//		courseInfo.setCourseState("1");
+		System.out.println("addController---------"+courseInfo);
 		boolean result = courseInfoService.addCourse(courseInfo);
 		if(result) {
 			model.addAttribute("info", "添加成功");
@@ -40,6 +41,7 @@ public class CourseInfoController {
 	
 	@RequestMapping("delete.action")
 	public String delete(CourseInfo courseInfo,Model model) {
+//		System.out.println("3333---------"+courseInfo);
 		courseInfo.setCourseState("0");
 		
 		boolean result = courseInfoService.updateCourse(courseInfo);
@@ -53,7 +55,8 @@ public class CourseInfoController {
 	
 	@RequestMapping("load.action")
 	public String load(Integer courseId,Model model) {
-		CourseInfo courseInfo = courseInfoService.getCourse(courseId);
+//		System.out.println("4444---------"+courseId);
+		CourseInfo courseInfo = courseInfoService.getCourseInfo(courseId);
 		model.addAttribute("courseInfo", courseInfo);
 		return "evaluation/course/course_update";
 	}
@@ -61,6 +64,7 @@ public class CourseInfoController {
 	
 	@RequestMapping("update.action")
 	public String update(CourseInfo courseInfo,Model model) {
+		System.out.println("updateController---------"+courseInfo);
 		boolean result=courseInfoService.updateCourse(courseInfo);
 		if(result) {
 			model.addAttribute("info", "修改成功");
@@ -71,9 +75,4 @@ public class CourseInfoController {
 	}
 	
 	
-//	@RequestMapping("show.action")
-//	public String showCourseInfo(Integer courseId,Model model) {
-//		
-//	}
-
 }

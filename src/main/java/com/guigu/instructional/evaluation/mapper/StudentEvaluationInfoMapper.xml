@@ -4,8 +4,11 @@
   <resultMap id="BaseResultMap" type="com.guigu.instructional.po.StudentEvaluationInfo" >
     <id column="student_evaluation_id" property="studentEvaluationId" jdbcType="INTEGER" />
     <result column="staff_id" property="staffId" jdbcType="INTEGER" />
+    <result column="staff_name" property="staffName" jdbcType="VARCHAR" />
     <result column="student_id" property="studentId" jdbcType="INTEGER" />
+    <result column="student_name" property="studentName" jdbcType="VARCHAR" />
     <result column="course_id" property="courseId" jdbcType="INTEGER" />
+    <result column="course_name" property="courseName" jdbcType="VARCHAR" />
     <result column="student_evaluation_class_content" property="studentEvaluationClassContent" jdbcType="VARCHAR" />
     <result column="student_evaluation_class_activity" property="studentEvaluationClassActivity" jdbcType="VARCHAR" />
     <result column="student_evaluation_answer_patiently" property="studentEvaluationAnswerPatiently" jdbcType="VARCHAR" />
@@ -71,9 +74,9 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    student_evaluation_id, staff_id, student_id, course_id, student_evaluation_class_content, 
-    student_evaluation_class_activity, student_evaluation_answer_patiently, student_evaluation_extra_evaluate, 
-    student_evaluation_state
+    student_evaluation_id, staff_id, staff_name, student_id, student_name, course_id, 
+    course_name, student_evaluation_class_content, student_evaluation_class_activity, 
+    student_evaluation_answer_patiently, student_evaluation_extra_evaluate, student_evaluation_state
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.guigu.instructional.po.StudentEvaluationInfoExample" >
     select
@@ -106,13 +109,15 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.guigu.instructional.po.StudentEvaluationInfo" >
-    insert into student_evaluation_info (student_evaluation_id, staff_id, student_id, 
-      course_id, student_evaluation_class_content, 
+    insert into student_evaluation_info (student_evaluation_id, staff_id, staff_name, 
+      student_id, student_name, course_id, 
+      course_name, student_evaluation_class_content, 
       student_evaluation_class_activity, student_evaluation_answer_patiently, 
       student_evaluation_extra_evaluate, student_evaluation_state
       )
-    values (#{studentEvaluationId,jdbcType=INTEGER}, #{staffId,jdbcType=INTEGER}, #{studentId,jdbcType=INTEGER}, 
-      #{courseId,jdbcType=INTEGER}, #{studentEvaluationClassContent,jdbcType=VARCHAR}, 
+    values (#{studentEvaluationId,jdbcType=INTEGER}, #{staffId,jdbcType=INTEGER}, #{staffName,jdbcType=VARCHAR}, 
+      #{studentId,jdbcType=INTEGER}, #{studentName,jdbcType=VARCHAR}, #{courseId,jdbcType=INTEGER}, 
+      #{courseName,jdbcType=VARCHAR}, #{studentEvaluationClassContent,jdbcType=VARCHAR}, 
       #{studentEvaluationClassActivity,jdbcType=VARCHAR}, #{studentEvaluationAnswerPatiently,jdbcType=VARCHAR}, 
       #{studentEvaluationExtraEvaluate,jdbcType=VARCHAR}, #{studentEvaluationState,jdbcType=VARCHAR}
       )
@@ -126,11 +131,20 @@
       <if test="staffId != null" >
         staff_id,
       </if>
+      <if test="staffName != null" >
+        staff_name,
+      </if>
       <if test="studentId != null" >
         student_id,
       </if>
+      <if test="studentName != null" >
+        student_name,
+      </if>
       <if test="courseId != null" >
         course_id,
+      </if>
+      <if test="courseName != null" >
+        course_name,
       </if>
       <if test="studentEvaluationClassContent != null" >
         student_evaluation_class_content,
@@ -155,11 +169,20 @@
       <if test="staffId != null" >
         #{staffId,jdbcType=INTEGER},
       </if>
+      <if test="staffName != null" >
+        #{staffName,jdbcType=VARCHAR},
+      </if>
       <if test="studentId != null" >
         #{studentId,jdbcType=INTEGER},
       </if>
+      <if test="studentName != null" >
+        #{studentName,jdbcType=VARCHAR},
+      </if>
       <if test="courseId != null" >
         #{courseId,jdbcType=INTEGER},
+      </if>
+      <if test="courseName != null" >
+        #{courseName,jdbcType=VARCHAR},
       </if>
       <if test="studentEvaluationClassContent != null" >
         #{studentEvaluationClassContent,jdbcType=VARCHAR},
@@ -193,11 +216,20 @@
       <if test="record.staffId != null" >
         staff_id = #{record.staffId,jdbcType=INTEGER},
       </if>
+      <if test="record.staffName != null" >
+        staff_name = #{record.staffName,jdbcType=VARCHAR},
+      </if>
       <if test="record.studentId != null" >
         student_id = #{record.studentId,jdbcType=INTEGER},
       </if>
+      <if test="record.studentName != null" >
+        student_name = #{record.studentName,jdbcType=VARCHAR},
+      </if>
       <if test="record.courseId != null" >
         course_id = #{record.courseId,jdbcType=INTEGER},
+      </if>
+      <if test="record.courseName != null" >
+        course_name = #{record.courseName,jdbcType=VARCHAR},
       </if>
       <if test="record.studentEvaluationClassContent != null" >
         student_evaluation_class_content = #{record.studentEvaluationClassContent,jdbcType=VARCHAR},
@@ -223,8 +255,11 @@
     update student_evaluation_info
     set student_evaluation_id = #{record.studentEvaluationId,jdbcType=INTEGER},
       staff_id = #{record.staffId,jdbcType=INTEGER},
+      staff_name = #{record.staffName,jdbcType=VARCHAR},
       student_id = #{record.studentId,jdbcType=INTEGER},
+      student_name = #{record.studentName,jdbcType=VARCHAR},
       course_id = #{record.courseId,jdbcType=INTEGER},
+      course_name = #{record.courseName,jdbcType=VARCHAR},
       student_evaluation_class_content = #{record.studentEvaluationClassContent,jdbcType=VARCHAR},
       student_evaluation_class_activity = #{record.studentEvaluationClassActivity,jdbcType=VARCHAR},
       student_evaluation_answer_patiently = #{record.studentEvaluationAnswerPatiently,jdbcType=VARCHAR},
@@ -240,11 +275,20 @@
       <if test="staffId != null" >
         staff_id = #{staffId,jdbcType=INTEGER},
       </if>
+      <if test="staffName != null" >
+        staff_name = #{staffName,jdbcType=VARCHAR},
+      </if>
       <if test="studentId != null" >
         student_id = #{studentId,jdbcType=INTEGER},
       </if>
+      <if test="studentName != null" >
+        student_name = #{studentName,jdbcType=VARCHAR},
+      </if>
       <if test="courseId != null" >
         course_id = #{courseId,jdbcType=INTEGER},
+      </if>
+      <if test="courseName != null" >
+        course_name = #{courseName,jdbcType=VARCHAR},
       </if>
       <if test="studentEvaluationClassContent != null" >
         student_evaluation_class_content = #{studentEvaluationClassContent,jdbcType=VARCHAR},
@@ -267,8 +311,11 @@
   <update id="updateByPrimaryKey" parameterType="com.guigu.instructional.po.StudentEvaluationInfo" >
     update student_evaluation_info
     set staff_id = #{staffId,jdbcType=INTEGER},
+      staff_name = #{staffName,jdbcType=VARCHAR},
       student_id = #{studentId,jdbcType=INTEGER},
+      student_name = #{studentName,jdbcType=VARCHAR},
       course_id = #{courseId,jdbcType=INTEGER},
+      course_name = #{courseName,jdbcType=VARCHAR},
       student_evaluation_class_content = #{studentEvaluationClassContent,jdbcType=VARCHAR},
       student_evaluation_class_activity = #{studentEvaluationClassActivity,jdbcType=VARCHAR},
       student_evaluation_answer_patiently = #{studentEvaluationAnswerPatiently,jdbcType=VARCHAR},

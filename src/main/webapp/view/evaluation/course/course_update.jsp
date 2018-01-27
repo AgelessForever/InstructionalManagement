@@ -18,7 +18,7 @@
  </ul>
 </div>
 	
-	<form action="${pageContext.request.contextPath }/evaluation/course/update.action" method="post" class="form-horizontal">
+	<form action="${pageContext.request.contextPath }/evaluation/course/update.action"  class="form-horizontal">
 
     <h5 class="page-header alert-info" style="padding:10px; margin:0px; margin-bottom:5px;">基本信息</h5>
     
@@ -62,9 +62,9 @@
             	<label class="col-sm-3 control-label">课程难度</label>
                 <div class="col-sm-9">
                 	  <select name="courseDifficulty" class="form-control input-sm">
-                     	<option ${courseInfo.courseDifficulty=='难'?'selected':''}>难</option>
-                        <option ${courseInfo.courseDifficulty=='中等'?'selected':''}>中等</option>
-                        <option ${courseInfo.courseDifficulty=='简单'?'selected':''}>简单</option>
+                     	<option ${courseInfo.courseDifficulty=='1'?'selected':''}>难</option>
+                        <option ${courseInfo.courseDifficulty=='2'?'selected':''}>中等</option>
+                        <option ${courseInfo.courseDifficulty=='3'?'selected':''}>简单</option>
                      </select>
                 </div>
             </div>
@@ -83,7 +83,7 @@
         		<div class="form-group">
         			<label class="col-sm-3 control-label">课程描述</label>
                	    <div class="col-sm-9">
-                		<textarea class="form-control" name="courseDesc">"${courseInfo.courseDesc }"</textarea>
+                		<textarea class="form-control" name="courseDesc">${courseInfo.courseDesc }</textarea>
                 	</div>
            		</div>	
        		</div>

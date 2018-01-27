@@ -4,8 +4,11 @@
   <resultMap id="BaseResultMap" type="com.guigu.instructional.po.TeacherEvaluationInfo" >
     <id column="teacher_evaluation_id" property="teacherEvaluationId" jdbcType="INTEGER" />
     <result column="staff_id" property="staffId" jdbcType="INTEGER" />
+    <result column="staff_name" property="staffName" jdbcType="VARCHAR" />
     <result column="student_id" property="studentId" jdbcType="INTEGER" />
+    <result column="student_name" property="studentName" jdbcType="VARCHAR" />
     <result column="course_id" property="courseId" jdbcType="INTEGER" />
+    <result column="course_name" property="courseName" jdbcType="VARCHAR" />
     <result column="teacher_evaluation_class_attitude" property="teacherEvaluationClassAttitude" jdbcType="VARCHAR" />
     <result column="teacher_evaluation_workontime" property="teacherEvaluationWorkontime" jdbcType="VARCHAR" />
     <result column="teacher_evaluation_bekins" property="teacherEvaluationBekins" jdbcType="VARCHAR" />
@@ -71,9 +74,9 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    teacher_evaluation_id, staff_id, student_id, course_id, teacher_evaluation_class_attitude, 
-    teacher_evaluation_workontime, teacher_evaluation_bekins, teacher_evaluation_extra_evaluate, 
-    teacher_evaluation_state
+    teacher_evaluation_id, staff_id, staff_name, student_id, student_name, course_id, 
+    course_name, teacher_evaluation_class_attitude, teacher_evaluation_workontime, teacher_evaluation_bekins, 
+    teacher_evaluation_extra_evaluate, teacher_evaluation_state
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.guigu.instructional.po.TeacherEvaluationInfoExample" >
     select
@@ -106,13 +109,15 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.guigu.instructional.po.TeacherEvaluationInfo" >
-    insert into teacher_evaluation_info (teacher_evaluation_id, staff_id, student_id, 
-      course_id, teacher_evaluation_class_attitude, 
+    insert into teacher_evaluation_info (teacher_evaluation_id, staff_id, staff_name, 
+      student_id, student_name, course_id, 
+      course_name, teacher_evaluation_class_attitude, 
       teacher_evaluation_workontime, teacher_evaluation_bekins, 
       teacher_evaluation_extra_evaluate, teacher_evaluation_state
       )
-    values (#{teacherEvaluationId,jdbcType=INTEGER}, #{staffId,jdbcType=INTEGER}, #{studentId,jdbcType=INTEGER}, 
-      #{courseId,jdbcType=INTEGER}, #{teacherEvaluationClassAttitude,jdbcType=VARCHAR}, 
+    values (#{teacherEvaluationId,jdbcType=INTEGER}, #{staffId,jdbcType=INTEGER}, #{staffName,jdbcType=VARCHAR}, 
+      #{studentId,jdbcType=INTEGER}, #{studentName,jdbcType=VARCHAR}, #{courseId,jdbcType=INTEGER}, 
+      #{courseName,jdbcType=VARCHAR}, #{teacherEvaluationClassAttitude,jdbcType=VARCHAR}, 
       #{teacherEvaluationWorkontime,jdbcType=VARCHAR}, #{teacherEvaluationBekins,jdbcType=VARCHAR}, 
       #{teacherEvaluationExtraEvaluate,jdbcType=VARCHAR}, #{teacherEvaluationState,jdbcType=VARCHAR}
       )
@@ -126,11 +131,20 @@
       <if test="staffId != null" >
         staff_id,
       </if>
+      <if test="staffName != null" >
+        staff_name,
+      </if>
       <if test="studentId != null" >
         student_id,
       </if>
+      <if test="studentName != null" >
+        student_name,
+      </if>
       <if test="courseId != null" >
         course_id,
+      </if>
+      <if test="courseName != null" >
+        course_name,
       </if>
       <if test="teacherEvaluationClassAttitude != null" >
         teacher_evaluation_class_attitude,
@@ -155,11 +169,20 @@
       <if test="staffId != null" >
         #{staffId,jdbcType=INTEGER},
       </if>
+      <if test="staffName != null" >
+        #{staffName,jdbcType=VARCHAR},
+      </if>
       <if test="studentId != null" >
         #{studentId,jdbcType=INTEGER},
       </if>
+      <if test="studentName != null" >
+        #{studentName,jdbcType=VARCHAR},
+      </if>
       <if test="courseId != null" >
         #{courseId,jdbcType=INTEGER},
+      </if>
+      <if test="courseName != null" >
+        #{courseName,jdbcType=VARCHAR},
       </if>
       <if test="teacherEvaluationClassAttitude != null" >
         #{teacherEvaluationClassAttitude,jdbcType=VARCHAR},
@@ -193,11 +216,20 @@
       <if test="record.staffId != null" >
         staff_id = #{record.staffId,jdbcType=INTEGER},
       </if>
+      <if test="record.staffName != null" >
+        staff_name = #{record.staffName,jdbcType=VARCHAR},
+      </if>
       <if test="record.studentId != null" >
         student_id = #{record.studentId,jdbcType=INTEGER},
       </if>
+      <if test="record.studentName != null" >
+        student_name = #{record.studentName,jdbcType=VARCHAR},
+      </if>
       <if test="record.courseId != null" >
         course_id = #{record.courseId,jdbcType=INTEGER},
+      </if>
+      <if test="record.courseName != null" >
+        course_name = #{record.courseName,jdbcType=VARCHAR},
       </if>
       <if test="record.teacherEvaluationClassAttitude != null" >
         teacher_evaluation_class_attitude = #{record.teacherEvaluationClassAttitude,jdbcType=VARCHAR},
@@ -223,8 +255,11 @@
     update teacher_evaluation_info
     set teacher_evaluation_id = #{record.teacherEvaluationId,jdbcType=INTEGER},
       staff_id = #{record.staffId,jdbcType=INTEGER},
+      staff_name = #{record.staffName,jdbcType=VARCHAR},
       student_id = #{record.studentId,jdbcType=INTEGER},
+      student_name = #{record.studentName,jdbcType=VARCHAR},
       course_id = #{record.courseId,jdbcType=INTEGER},
+      course_name = #{record.courseName,jdbcType=VARCHAR},
       teacher_evaluation_class_attitude = #{record.teacherEvaluationClassAttitude,jdbcType=VARCHAR},
       teacher_evaluation_workontime = #{record.teacherEvaluationWorkontime,jdbcType=VARCHAR},
       teacher_evaluation_bekins = #{record.teacherEvaluationBekins,jdbcType=VARCHAR},
@@ -240,11 +275,20 @@
       <if test="staffId != null" >
         staff_id = #{staffId,jdbcType=INTEGER},
       </if>
+      <if test="staffName != null" >
+        staff_name = #{staffName,jdbcType=VARCHAR},
+      </if>
       <if test="studentId != null" >
         student_id = #{studentId,jdbcType=INTEGER},
       </if>
+      <if test="studentName != null" >
+        student_name = #{studentName,jdbcType=VARCHAR},
+      </if>
       <if test="courseId != null" >
         course_id = #{courseId,jdbcType=INTEGER},
+      </if>
+      <if test="courseName != null" >
+        course_name = #{courseName,jdbcType=VARCHAR},
       </if>
       <if test="teacherEvaluationClassAttitude != null" >
         teacher_evaluation_class_attitude = #{teacherEvaluationClassAttitude,jdbcType=VARCHAR},
@@ -267,8 +311,11 @@
   <update id="updateByPrimaryKey" parameterType="com.guigu.instructional.po.TeacherEvaluationInfo" >
     update teacher_evaluation_info
     set staff_id = #{staffId,jdbcType=INTEGER},
+      staff_name = #{staffName,jdbcType=VARCHAR},
       student_id = #{studentId,jdbcType=INTEGER},
+      student_name = #{studentName,jdbcType=VARCHAR},
       course_id = #{courseId,jdbcType=INTEGER},
+      course_name = #{courseName,jdbcType=VARCHAR},
       teacher_evaluation_class_attitude = #{teacherEvaluationClassAttitude,jdbcType=VARCHAR},
       teacher_evaluation_workontime = #{teacherEvaluationWorkontime,jdbcType=VARCHAR},
       teacher_evaluation_bekins = #{teacherEvaluationBekins,jdbcType=VARCHAR},

@@ -5,9 +5,15 @@ public class StudentEvaluationInfo {
 
     private Integer staffId;
 
+    private String staffName;
+
     private Integer studentId;
 
+    private String studentName;
+
     private Integer courseId;
+
+    private String courseName;
 
     private String studentEvaluationClassContent;
 
@@ -35,6 +41,14 @@ public class StudentEvaluationInfo {
         this.staffId = staffId;
     }
 
+    public String getStaffName() {
+        return staffName;
+    }
+
+    public void setStaffName(String staffName) {
+        this.staffName = staffName == null ? null : staffName.trim();
+    }
+
     public Integer getStudentId() {
         return studentId;
     }
@@ -43,12 +57,28 @@ public class StudentEvaluationInfo {
         this.studentId = studentId;
     }
 
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName == null ? null : studentName.trim();
+    }
+
     public Integer getCourseId() {
         return courseId;
     }
 
     public void setCourseId(Integer courseId) {
         this.courseId = courseId;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName == null ? null : courseName.trim();
     }
 
     public String getStudentEvaluationClassContent() {

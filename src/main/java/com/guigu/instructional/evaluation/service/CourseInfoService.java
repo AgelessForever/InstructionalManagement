@@ -25,13 +25,13 @@ public interface CourseInfoService {
 	 * @param Course
 	 * @return
 	 */
-	public List<CourseInfo> getCourseList(CourseInfo courseInfo);
+	public List<CourseInfo> getCourseInfoList(CourseInfo courseInfo);
 	
 	/**
 	 * getCourse:根据课程编号查询课程信息
 	 * @param Course
 	 * @return
 	 */
-	public CourseInfo getCourse(Integer courseId);
+	public CourseInfo getCourseInfo(Integer courseId);
 	
 }

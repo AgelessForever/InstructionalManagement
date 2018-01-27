@@ -1,16 +1,12 @@
-<!doctype html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>首页</title>
-<!-- 新 Bootstrap 核心 CSS 文件 -->
-<!-- 新 Bootstrap 核心 CSS 文件 -->
-<link rel="stylesheet" href="../../../resource/css/bootstrap.min.css">
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="../../../resource/js/bootstrap.js"></script>
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="../../../resource/js/bootstrap.min.js"></script>
+<%@ include file="/view/public/common.jspf" %>
 </head>
 
 
@@ -23,7 +19,7 @@
 		</div>
 		
 		
-		<form action="" method="post" class="form-horizontal">
+		<form action="${pageContext.request.contextPath }/evaluation/t_evaluation/add.action" method="post" class="form-horizontal">
 
     	<h5 class="page-header alert-info" style="padding:10px; margin:0px; margin-bottom:5px;">基本信息</h5>
 		<div class="row">
@@ -31,7 +27,7 @@
         		<div class="form-group">
             		<label class="col-sm-3 control-label">老师评价表编号</label>
                			<div class="col-sm-9">
-                			<input type="text" name="" class="form-control input-sm" placeholder="请输入编号"/>
+                			<input type="text" name="teacherEvaluationId"  readonly="readonly"  class="form-control input-sm" placeholder="请输入编号"/>
                 		</div>
             	</div>       
         	</div>
@@ -39,10 +35,11 @@
             <div class="form-group">
             	<label class="col-sm-3 control-label">课程名称</label>
                 <div class="col-sm-9">
-                	<select name="" class="form-control input-sm">
-                     	<option>从数据库那边搞过来</option>
-                        <option>ok</option>
-                        <option>。。。</option>
+                	<select name="courseId" class="form-control input-sm">
+                     	<option>请选择</option>
+                     	<c:forEach items="${courselist}" var="course">
+                     		<option value ="${course.courseId }" ${course.courseId==teacherEvaluationInfo.courseId?'selected':'' }>${course.courseName }</option>
+                     	</c:forEach>
                      </select>
                 </div>
             </div>
@@ -55,10 +52,11 @@
         	<div class="form-group">
             	<label class="col-sm-3 control-label">员工姓名(评价人)</label>
                 <div class="col-sm-9">
-               		<select name="" class="form-control input-sm">
-                     	<option>从数据库那边搞过来</option>
-                        <option>ok</option>
-                        <option>。。。</option>
+               		<select name="staffId" class="form-control input-sm">
+                     	<option>请选择</option>
+                        <c:forEach items="${stafflist}" var="staff">
+                     		<option value ="${staff.staffId }" ${staff.staffId==teacherEvaluationInfo.staffId?'selected':'' }>${staff.staffName }</option>
+                     	</c:forEach>
                     </select>
                 </div>
             </div>
@@ -67,10 +65,11 @@
         	<div class="form-group">
             	<label class="col-sm-3 control-label">学生姓名(被评人)</label>
                 <div class="col-sm-9">
-               		<select name="" class="form-control input-sm">
-                     	<option>从数据库那边搞过来</option>
-                        <option>ok</option>
-                        <option>。。。</option>
+               		<select name="studentId" class="form-control input-sm">
+                     	<option>请选择</option>
+                        <c:forEach items="${studentlist}" var="student">
+                     		<option value ="${student.studentId }" ${student.studentId==teacherEvaluationInfo.studentId?'selected':'' }>${student.studentName }</option>
+                     	</c:forEach>
                     </select>
                 </div>
             </div>
@@ -87,7 +86,7 @@
         	<div class="form-group">
             	<label class="col-sm-3 control-label">上课态度评价</label>
                 <div class="col-sm-9">
-               			<input type="text" name="" class="form-control input-sm" placeholder="该生上课态度..."/>
+               			<input type="text" name="teacherEvaluationClassAttitude" class="form-control input-sm" placeholder="该生上课态度..."/>
                 </div>
             </div>
         </div>
@@ -95,7 +94,7 @@
         	<div class="form-group">
             	<label class="col-sm-3 control-label">作业完成程度评价</label>
                 <div class="col-sm-9">
-               		 <input type="text" name="" class="form-control input-sm" placeholder="他喜欢做作业吗.."/>
+               		 <input type="text" name="teacherEvaluationWorkontime" class="form-control input-sm" placeholder="他喜欢做作业吗.."/>
                 </div>
             </div>
 
@@ -109,7 +108,7 @@
         	<div class="form-group">
             	<label class="col-sm-3 control-label">着装打扮评价</label>
                 <div class="col-sm-9">
-               	   <input type="text" name="" class="form-control input-sm" placeholder="不会喜欢奇装异服吧..."/>
+               	   <input type="text" name="teacherEvaluationBekins" class="form-control input-sm" placeholder="不会喜欢奇装异服吧..."/>
                 </div>
            	 </div>
     		</div>
@@ -117,7 +116,7 @@
         		<div class="form-group">
             		<label class="col-sm-3 control-label">额外的评价</label>
                 	<div class="col-sm-9">
-               		 	<input type="text" name="" class="form-control input-sm" placeholder="是否还有想说的..."/>
+               		 	<input type="text" name="teacherEvaluationExtraEvaluate" class="form-control input-sm" placeholder="是否还有想说的..."/>
                 	</div>
             	</div>
 
@@ -133,7 +132,7 @@
     		<input id="cy" type="submit" class="btn btn-success" value="保存"/>
     	</div>
     	<div class="col-sm-3">
-    		<a class="btn btn-warning" href="t_evaluation_list.html">返回上一级</a>
+    		<a href="${pageContext.request.contextPath }/evaluation/t_evaluation/list.action">返回上一级</a>
     	</div>
     	<div class="col-sm-3"></div>
     	

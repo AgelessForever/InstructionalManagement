@@ -27,7 +27,7 @@
 
 	     		<div class="form-group">
 	         	<label class="" for="activename">课程名称：</label>
-	        	<input type="text" class="form-control" id="activename" placeholder="请输入课程名称">
+	        	<input type="text" name="courseName" class="form-control" id="activename" placeholder="请输入课程名称">
 	      		</div>
 	
 	    		<input type="submit"   class="btn btn-danger"     value="查询"/>
