@@ -22,17 +22,17 @@
     		</ul>
 		</div>
 
-	<form action="${pageContext.request.contextPath }/evaluation/course/list.action" class="form-inline">
 		<div class="row alert alert-info"  style="margin:0px; padding:3px;" >
+			<form action="${pageContext.request.contextPath }/evaluation/course/list.action" class="form-inline">
 
-     		<div class="form-group">
-         	<label class="" for="activename">课程名称：</label>
-        	<input type="email" class="form-control" id="activename" placeholder="请输入课程名称">
-      		</div>
-
-    		<input type="button"   class="btn btn-danger"     value="查询"/>
-    		<input type="button"   class="btn btn-success"   value="添加" onClick="javascript:window.location='${pageContext.request.contextPath }/view/evaluation/course/course_add.jsp'"/>
-    		
+	     		<div class="form-group">
+	         	<label class="" for="activename">课程名称：</label>
+	        	<input type="text" class="form-control" id="activename" placeholder="请输入课程名称">
+	      		</div>
+	
+	    		<input type="submit"   class="btn btn-danger"     value="查询"/>
+	    		<input type="button"   class="btn btn-success"   value="添加" onClick="javascript:window.location='${pageContext.request.contextPath }/view/evaluation/course/course_add.jsp'"/>
+    		</form>		
 		</div>
 		
 		<!-- 提示信息区域 -->
@@ -59,7 +59,7 @@
     		</display:table>         
 		</div>
 
-</form>		
+
 		
 		
 		

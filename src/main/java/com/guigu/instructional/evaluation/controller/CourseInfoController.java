@@ -12,7 +12,7 @@ import com.guigu.instructional.evaluation.service.CourseInfoService;
 import com.guigu.instructional.po.CourseInfo;
 
 @Controller
-@RequestMapping("/system/course/")
+@RequestMapping("/evaluation/course/")
 public class CourseInfoController {
 	
 	@Resource (name = "courseInfoServiceImpl")
@@ -23,7 +23,7 @@ public class CourseInfoController {
 		List<CourseInfo> list=courseInfoService.getCourseList(courseInfo);
 		model.addAttribute("list", list);
 		
-		return "system/course/course_list";
+		return "evaluation/course/course_list";
 	}
 	
 	@RequestMapping("add.action")
@@ -55,7 +55,7 @@ public class CourseInfoController {
 	public String load(Integer courseId,Model model) {
 		CourseInfo courseInfo = courseInfoService.getCourse(courseId);
 		model.addAttribute("courseInfo", courseInfo);
-		return "system/course/course_update";
+		return "evaluation/course/course_update";
 	}
 	
 	
