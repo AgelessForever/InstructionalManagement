@@ -50,8 +50,24 @@ public class TeacherEvaluationInfoServiceImpl implements TeacherEvaluationInfoSe
 		Criteria criteria = teacherEvaluationInfoExample.createCriteria();
 		
 		if(teacherEvaluationInfo!=null) {
+			//根据评价表id查询
 			if(teacherEvaluationInfo.getTeacherEvaluationId()!=null) {
 				criteria.andTeacherEvaluationIdEqualTo(teacherEvaluationInfo.getTeacherEvaluationId());
+			}
+			//根据员工名称查询
+			if(teacherEvaluationInfo.getStaffName()!=null) {
+				teacherEvaluationInfo.setStaffName("%"+teacherEvaluationInfo.getStaffName()+"%");
+				criteria.andStaffNameLike(teacherEvaluationInfo.getStaffName());
+			}
+			//根据学员名称查询
+			if(teacherEvaluationInfo.getStudentName()!=null) {
+				teacherEvaluationInfo.setStudentName("%"+teacherEvaluationInfo.getStudentName()+"%");
+				criteria.andStudentNameLike(teacherEvaluationInfo.getStudentName());
+			}
+			//根据课程名称查询
+			if(teacherEvaluationInfo.getCourseName()!=null) {
+				teacherEvaluationInfo.setCourseName("%"+teacherEvaluationInfo.getCourseName()+"%");
+				criteria.andCourseNameLike(teacherEvaluationInfo.getCourseName());
 			}
 		}
 		

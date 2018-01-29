@@ -37,7 +37,7 @@
  					<label class="control-label">课程名称:</label>
  				</div>
  				<div class="col-sm-3">
- 					<p>${teacherEvaluationInfo.courseId }</p>
+ 					<p>${teacherEvaluationInfo.courseName }</p>
  				</div>				
  			</div>
  			
@@ -49,13 +49,13 @@
  					<label class="control-label">评价人:</label>
  				</div>
  				<div class="col-sm-3">
- 					<p>${teacherEvaluationInfo.staffId }</p>
+ 					<p>${teacherEvaluationInfo.staffName }</p>
  				</div>
  				<div class="col-sm-3">
  					<label class="control-label">被评价人:</label>
  				</div>
  				<div class="col-sm-3">
- 					<p>${teacherEvaluationInfo.studentId }</p>
+ 					<p>${teacherEvaluationInfo.studentName }</p>
  				</div>				
  			</div>
  			
@@ -104,7 +104,7 @@
     			
     		</div>	
     		<div class="col-sm-5">
-    			<a href="${pageContext.request.contextPath }/evaluation/t_evaluation/load.action?teacherEvaluationId=${teacherEvaluationInfo.teacherEvaluationId}" class="btn btn-success" >修改</a>
+    			<a href="${pageContext.request.contextPath }/evaluation/t_evaluation/updateprocess.action?teacherEvaluationId=${teacherEvaluationInfo.teacherEvaluationId}" class="btn btn-success" >修改</a>
 	        	<a href="${pageContext.request.contextPath }/evaluation/t_evaluation/delete.action?teacherEvaluationId=${teacherEvaluationInfo.teacherEvaluationId}" class="btn btn-success" >删除</a>
 	        	<a href="${pageContext.request.contextPath }/evaluation/t_evaluation/list.action" class="btn btn-waring" >返回上一级</a>
     		</div>

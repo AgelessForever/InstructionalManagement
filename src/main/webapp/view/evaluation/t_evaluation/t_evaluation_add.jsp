@@ -35,10 +35,10 @@
             <div class="form-group">
             	<label class="col-sm-3 control-label">课程名称</label>
                 <div class="col-sm-9">
-                	<select name="courseId" class="form-control input-sm">
-                     	<option>请选择</option>
+                	<select name="courseName" class="form-control input-sm">
+                     	<!-- <option>请选择</option> -->
                      	<c:forEach items="${courselist}" var="course">
-                     		<option value ="${course.courseId }" ${course.courseId==teacherEvaluationInfo.courseId?'selected':'' }>${course.courseName }</option>
+                     		<option value ="${course.courseName }">${course.courseName }</option>
                      	</c:forEach>
                      </select>
                 </div>
@@ -52,10 +52,10 @@
         	<div class="form-group">
             	<label class="col-sm-3 control-label">员工姓名(评价人)</label>
                 <div class="col-sm-9">
-               		<select name="staffId" class="form-control input-sm">
-                     	<option>请选择</option>
+               		<select name="staffName" class="form-control input-sm">
+                     	<!-- <option>请选择</option> -->
                         <c:forEach items="${stafflist}" var="staff">
-                     		<option value ="${staff.staffId }" ${staff.staffId==teacherEvaluationInfo.staffId?'selected':'' }>${staff.staffName }</option>
+                     		<option value ="${staff.staffName }">${staff.staffName }</option>
                      	</c:forEach>
                     </select>
                 </div>
@@ -65,10 +65,10 @@
         	<div class="form-group">
             	<label class="col-sm-3 control-label">学生姓名(被评人)</label>
                 <div class="col-sm-9">
-               		<select name="studentId" class="form-control input-sm">
-                     	<option>请选择</option>
+               		<select name="studentName" class="form-control input-sm">
+                     	<!-- <option>请选择</option> -->
                         <c:forEach items="${studentlist}" var="student">
-                     		<option value ="${student.studentId }" ${student.studentId==teacherEvaluationInfo.studentId?'selected':'' }>${student.studentName }</option>
+                     		<option value ="${student.studentName }" >${student.studentName }</option>
                      	</c:forEach>
                     </select>
                 </div>

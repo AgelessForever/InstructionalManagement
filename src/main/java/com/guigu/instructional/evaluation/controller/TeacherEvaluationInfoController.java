@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.guigu.instructional.evaluation.service.CourseInfoService;
 import com.guigu.instructional.evaluation.service.TeacherEvaluationInfoService;
 import com.guigu.instructional.po.CourseInfo;
+import com.guigu.instructional.po.StaffInfo;
 import com.guigu.instructional.po.TeacherEvaluationInfo;
 import com.guigu.instructional.system.service.StaffInfoService;
 
@@ -92,6 +93,38 @@ public class TeacherEvaluationInfoController {
 		TeacherEvaluationInfo teacherEvaluationInfo = teacherEvaluationInfoService.getTeacherEvaluationInfo(teacherEvaluationId);
 		model.addAttribute("teacherEvaluationInfo", teacherEvaluationInfo);
 		return "evaluation/t_evaluation/t_evaluation_infor";
+	}
+	
+	@RequestMapping("addprocess.action")
+	public String addprocess(Integer teacherEvaluationId,Model model) {
+		TeacherEvaluationInfo teacherEvaluationInfo = teacherEvaluationInfoService.getTeacherEvaluationInfo(teacherEvaluationId);
+		model.addAttribute("teacherEvaluationInfo", teacherEvaluationInfo);
+		//查询所有的课程
+		List<CourseInfo> courselist =courseInfoService.getCourseInfoList(null);
+		model.addAttribute("courselist", courselist);
+		//查询所有的员工
+		List<StaffInfo> stafflist = staffInfoService.getStaffInfoList(null);
+		model.addAttribute("stafflist", stafflist);
+		//查询所有的学员
+		/*List<StudentInfo> studentlist = studentInfoService.getStudentInfoList(null);
+		model.addAttribute("studentlist", studentlist);*/
+		return "evaluation/t_evaluation/t_evaluation_add";
+	}
+	
+	@RequestMapping("updateprocess.action")
+	public String updateprocess(Integer teacherEvaluationId,Model model) {
+		TeacherEvaluationInfo teacherEvaluationInfo = teacherEvaluationInfoService.getTeacherEvaluationInfo(teacherEvaluationId);
+		model.addAttribute("teacherEvaluationInfo", teacherEvaluationInfo);
+		//查询所有的课程
+		List<CourseInfo> courselist =courseInfoService.getCourseInfoList(null);
+		model.addAttribute("courselist", courselist);
+		//查询所有的员工
+		List<StaffInfo> stafflist = staffInfoService.getStaffInfoList(null);
+		model.addAttribute("stafflist", stafflist);
+		//查询所有的学员
+		/*List<StudentInfo> studentlist = studentInfoService.getStudentInfoList(null);
+		model.addAttribute("studentlist", studentlist);*/
+		return "evaluation/t_evaluation/t_evaluation_update";
 	}
 	
 	
