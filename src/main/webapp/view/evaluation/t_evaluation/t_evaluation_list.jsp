@@ -16,18 +16,34 @@
         		<li>老师评价表信息</li>
     		</ul>
 		</div>
+		
+		<script type="text/javascript">
+			function query(tecondition){
+				$("#tekeyword").attr("name",tecondition.value);
+			}
+		</script>
 
 		<div class="row alert alert-info"  style="margin:0px; padding:3px;" >
 			<form class="form-inline" action="${pageContext.request.contextPath}/evaluation/t_evaluation/list.action">
-	
-	     		<div class="form-group">
-	         	<label class="" for="activename">老师评价表编号：</label>
-	        	<input type="text" name="teacherEvaluationId" class="form-control" id="activename" placeholder="请输入老师评价表编号">
+				<div class="col-sm-1">条件：</div>
+	     		<div class="col-sm-6">
+	     		<div class="col-sm-4">
+	     			<select class="form-control  input-sm" onchange="query(this)" name="tecondition">
+			        	<option value="">请选择</option>
+			        	<option value="teacherEvaluationId">编号</option>
+			            <option value="staffName">员工名称</option>
+			            <option value="studentName">学员名称</option>
+			            <option value="courseName">课程名称</option>
+			        </select>
+			        </div>
+			        <div class="col-sm-8">
+		        		<input type="text" name="tekeyword" class="form-control"  placeholder="请输入">
+		        	</div>
 	      		</div>
-	
+				<div class="col-sm-3">
 	    		<input type="submit"   class="btn btn-danger"     value="查询"/>
-	    		<%-- <input type="button"   class="btn btn-success"   value="添加" onClick="javascript:window.location='${pageContext.request.contextPath }/view/evaluation/t_evaluation/t_evaluation_add.jsp'"/> --%>
-	    		<a class="btn btn-waring" href="${pageContext.request.contextPath }/evaluation/t_evaluation/addprocess.action" paramId="teacherEvaluationId" paramProperty="teacherEvaluationId" value="添加">添加</a>
+	    		<a class="btn btn-warning" href="${pageContext.request.contextPath }/evaluation/t_evaluation/addprocess.action" paramId="teacherEvaluationId" paramProperty="teacherEvaluationId" value="添加">添加</a>
+	    		</div>
 	    	</form>
 		</div>
 		

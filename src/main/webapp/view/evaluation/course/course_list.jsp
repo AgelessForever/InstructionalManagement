@@ -25,9 +25,13 @@
 		<div class="row alert alert-info"  style="margin:0px; padding:3px;" >
 			<form action="${pageContext.request.contextPath }/evaluation/course/list.action" class="form-inline">
 
-	     		<div class="form-group">
-	         	<label class="" for="activename">课程名称：</label>
-	        	<input type="text" name="courseName" class="form-control" id="activename" placeholder="请输入课程名称">
+	     		<div class="col-sm-7">
+	     		<div class="col-sm-2">
+	         		<label class="" for="activename">课程名称：</label>
+	         	</div>
+	         	<div class="col-sm-10">
+	        		<input type="text" name="courseName" class="form-control" id="activename" placeholder="请输入课程名称">
+	      		</div>
 	      		</div>
 	
 	    		<input type="submit"   class="btn btn-danger"     value="查询"/>

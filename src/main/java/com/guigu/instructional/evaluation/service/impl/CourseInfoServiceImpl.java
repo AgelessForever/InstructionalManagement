@@ -61,6 +61,8 @@ public class CourseInfoServiceImpl implements CourseInfoService {
 				criteria.andCourseNameLike(courseInfo.getCourseName());
 			}
 			
+//			System.out.println("name"+courseInfo.getCourseName());
+			
 //			System.out.println(courseInfo.getCourseName());
 
 		}

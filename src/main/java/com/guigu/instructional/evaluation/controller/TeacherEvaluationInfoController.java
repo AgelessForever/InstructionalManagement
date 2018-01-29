@@ -33,7 +33,8 @@ public class TeacherEvaluationInfoController {
 	
 	@RequestMapping("list.action")
 	public String list(TeacherEvaluationInfo teacherEvaluationInfo,Model model) {
-		System.out.println("list.action");
+		System.out.println(teacherEvaluationInfo);
+		System.out.println(teacherEvaluationInfo.getStaffName());
 		List<TeacherEvaluationInfo> list = teacherEvaluationInfoService.getTeacherEvaluationInfoList(teacherEvaluationInfo);
 		model.addAttribute("list", list);
 		
@@ -43,7 +44,6 @@ public class TeacherEvaluationInfoController {
 	
 	@RequestMapping("add.action")
 	public String add(TeacherEvaluationInfo teacherEvaluationInfo,Model model) {
-		System.out.println("add.action");
 		boolean result = teacherEvaluationInfoService.addTeacherEvaluation(teacherEvaluationInfo);
 		if(result) {
 			model.addAttribute("info", "添加成功");
@@ -55,7 +55,6 @@ public class TeacherEvaluationInfoController {
 	
 	@RequestMapping("delete.action")
 	public String delete(TeacherEvaluationInfo teacherEvaluationInfo,Model model) {
-		System.out.println("delete.action");
 		teacherEvaluationInfo.setTeacherEvaluationState("0");
 		
 		boolean result = teacherEvaluationInfoService.updateTeacherEvaluation(teacherEvaluationInfo);
@@ -69,7 +68,6 @@ public class TeacherEvaluationInfoController {
 	
 	@RequestMapping("load.action")
 	public String load(Integer teacherEvaluationId,Model model) {
-		System.out.println("load.action");
 		TeacherEvaluationInfo teacherEvaluationInfo = teacherEvaluationInfoService.getTeacherEvaluationInfo(teacherEvaluationId);
 		model.addAttribute("teacherEvaluationInfo", teacherEvaluationInfo);
 		return "evaluation/t_evaluation/t_evaluation_update";
@@ -77,7 +75,6 @@ public class TeacherEvaluationInfoController {
 	
 	@RequestMapping("update.action")
 	public String update(TeacherEvaluationInfo teacherEvaluationInfo,Model model) {
-		System.out.println("update.action");
 		boolean result = teacherEvaluationInfoService.updateTeacherEvaluation(teacherEvaluationInfo);
 		if(result) {
 			model.addAttribute("info", "修改成功");
@@ -89,7 +86,6 @@ public class TeacherEvaluationInfoController {
 	
 	@RequestMapping("infor.action")
 	public String infor(Integer teacherEvaluationId,Model model) {
-		System.out.println("infor.action");
 		TeacherEvaluationInfo teacherEvaluationInfo = teacherEvaluationInfoService.getTeacherEvaluationInfo(teacherEvaluationId);
 		model.addAttribute("teacherEvaluationInfo", teacherEvaluationInfo);
 		return "evaluation/t_evaluation/t_evaluation_infor";

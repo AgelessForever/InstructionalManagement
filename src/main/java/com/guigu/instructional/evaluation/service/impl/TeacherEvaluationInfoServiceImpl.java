@@ -70,6 +70,11 @@ public class TeacherEvaluationInfoServiceImpl implements TeacherEvaluationInfoSe
 				criteria.andCourseNameLike(teacherEvaluationInfo.getCourseName());
 			}
 		}
+		System.out.println("model-----"+teacherEvaluationInfo);
+		System.out.println("id--------"+teacherEvaluationInfo.getTeacherEvaluationId());
+		System.out.println("staff-----"+teacherEvaluationInfo.getStaffName());
+		System.out.println("student---"+teacherEvaluationInfo.getStudentName());
+		System.out.println("course----"+teacherEvaluationInfo.getCourseName());
 		
 		criteria.andTeacherEvaluationStateEqualTo("1");
 		
