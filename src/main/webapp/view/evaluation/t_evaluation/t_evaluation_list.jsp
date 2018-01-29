@@ -25,8 +25,7 @@
 	        	<input type="text" name="teacherEvaluationId" class="form-control" id="activename" placeholder="请输入老师评价表编号">
 	      		</div>
 	
-	    		<input type="button"   class="btn btn-danger"     value="查询"/>
-	    		<a  class="btn btn-success"  href="t_evaluation_add.html">添加老师评价表</a>
+	    		<input type="submit"   class="btn btn-danger"     value="查询"/>
 	    		<input type="button"   class="btn btn-success"   value="添加" onClick="javascript:window.location='${pageContext.request.contextPath }/view/evaluation/t_evaluation/t_evaluation_add.jsp'"/>
 	    	</form>
 		</div>
@@ -50,13 +49,13 @@
     		<display:column property="staffId" title="员工名称"></display:column>
     		<display:column property="studentId" title="学生名称"></display:column>
     		<display:column property="courseId" title="课程名称"></display:column>
-    		<display:column href="${pageContext.request.contextPath }/evaluation/t_evaluaton/infor.action" paramId="teacherEvaluationId" paramProperty="teacherEvaluationId" value="详细信息" title="详细信息"></display:column>
-    		<display:column href="${pageContext.request.contextPath }/evaluation/t_evaluaton/load.action" paramId="teacherEvaluationId" paramProperty="teacherEvaluationId" value="修改" title="修改"></display:column>
-    		<display:column href="${pageContext.request.contextPath }/evaluation/t_evaluaton/delete.action" paramId="teacherEvaluationId" paramProperty="teacherEvaluationId" value="删除" title="删除"></display:column>
+    		<display:column href="${pageContext.request.contextPath}/evaluation/t_evaluation/infor.action" paramId="teacherEvaluationId" paramProperty="teacherEvaluationId" value="详细信息" title="详细信息"></display:column>
+    		<display:column href="${pageContext.request.contextPath }/evaluation/t_evaluation/load.action" paramId="teacherEvaluationId" paramProperty="teacherEvaluationId" value="修改" title="修改"></display:column>
+    		<display:column href="${pageContext.request.contextPath }/evaluation/t_evaluation/delete.action" paramId="teacherEvaluationId" paramProperty="teacherEvaluationId" value="删除" title="删除"></display:column>
     	
     		
   		  </display:table>
-</div>
+		</div>
 
 		
 		

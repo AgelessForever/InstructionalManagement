@@ -8,8 +8,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.guigu.instructional.evaluation.service.CourseInfoService;
 import com.guigu.instructional.evaluation.service.TeacherEvaluationInfoService;
+import com.guigu.instructional.po.CourseInfo;
 import com.guigu.instructional.po.TeacherEvaluationInfo;
+import com.guigu.instructional.system.service.StaffInfoService;
 
 @Controller
 @RequestMapping("/evaluation/t_evaluation")
@@ -18,15 +21,28 @@ public class TeacherEvaluationInfoController {
 	@Resource(name = "teacherEvaluationInfoServiceImpl")
 	private TeacherEvaluationInfoService teacherEvaluationInfoService;
 	
+	@Resource(name = "courseInfoServiceImpl")
+	private CourseInfoService courseInfoService;
+	
+	@Resource(name = "staffInfoServiceImpl")
+    private StaffInfoService staffInfoService;
+	
+	/*@Resource(name = "studentInfoServiceImpl")
+	private StudentInfoService studentInfoService;*/
+	
 	@RequestMapping("list.action")
 	public String list(TeacherEvaluationInfo teacherEvaluationInfo,Model model) {
+		System.out.println("list.action");
 		List<TeacherEvaluationInfo> list = teacherEvaluationInfoService.getTeacherEvaluationInfoList(teacherEvaluationInfo);
 		model.addAttribute("list", list);
+		
+		
 		return "evaluation/t_evaluation/t_evaluation_list";
 	}
 	
 	@RequestMapping("add.action")
 	public String add(TeacherEvaluationInfo teacherEvaluationInfo,Model model) {
+		System.out.println("add.action");
 		boolean result = teacherEvaluationInfoService.addTeacherEvaluation(teacherEvaluationInfo);
 		if(result) {
 			model.addAttribute("info", "添加成功");
@@ -38,19 +54,21 @@ public class TeacherEvaluationInfoController {
 	
 	@RequestMapping("delete.action")
 	public String delete(TeacherEvaluationInfo teacherEvaluationInfo,Model model) {
+		System.out.println("delete.action");
 		teacherEvaluationInfo.setTeacherEvaluationState("0");
 		
 		boolean result = teacherEvaluationInfoService.updateTeacherEvaluation(teacherEvaluationInfo);
 		if(result) {
-			model.addAttribute("info", "添加成功");
+			model.addAttribute("info", "删除成功");
         }else {
-            model.addAttribute("info", "添加失败");
+            model.addAttribute("info", "删除失败");
         }
         return this.list(null, model);
 	}
 	
 	@RequestMapping("load.action")
 	public String load(Integer teacherEvaluationId,Model model) {
+		System.out.println("load.action");
 		TeacherEvaluationInfo teacherEvaluationInfo = teacherEvaluationInfoService.getTeacherEvaluationInfo(teacherEvaluationId);
 		model.addAttribute("teacherEvaluationInfo", teacherEvaluationInfo);
 		return "evaluation/t_evaluation/t_evaluation_update";
@@ -58,17 +76,19 @@ public class TeacherEvaluationInfoController {
 	
 	@RequestMapping("update.action")
 	public String update(TeacherEvaluationInfo teacherEvaluationInfo,Model model) {
+		System.out.println("update.action");
 		boolean result = teacherEvaluationInfoService.updateTeacherEvaluation(teacherEvaluationInfo);
 		if(result) {
-			model.addAttribute("info", "添加成功");
+			model.addAttribute("info", "修改成功");
         }else {
-            model.addAttribute("info", "添加失败");
+            model.addAttribute("info", "修改失败");
         }
         return this.list(null, model);
 	}
 	
 	@RequestMapping("infor.action")
 	public String infor(Integer teacherEvaluationId,Model model) {
+		System.out.println("infor.action");
 		TeacherEvaluationInfo teacherEvaluationInfo = teacherEvaluationInfoService.getTeacherEvaluationInfo(teacherEvaluationId);
 		model.addAttribute("teacherEvaluationInfo", teacherEvaluationInfo);
 		return "evaluation/t_evaluation/t_evaluation_infor";

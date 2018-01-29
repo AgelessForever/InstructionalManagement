@@ -62,9 +62,9 @@
             	<label class="col-sm-3 control-label">课程难度</label>
                 <div class="col-sm-9">
                 	  <select name="courseDifficulty" class="form-control input-sm">
-                     	<option ${courseInfo.courseDifficulty=='1'?'selected':''}>难</option>
-                        <option ${courseInfo.courseDifficulty=='2'?'selected':''}>中等</option>
-                        <option ${courseInfo.courseDifficulty=='3'?'selected':''}>简单</option>
+                     	<option ${courseInfo.courseDifficulty=='1'?'selected':''}>1</option>
+                        <option ${courseInfo.courseDifficulty=='2'?'selected':''}>2</option>
+                        <option ${courseInfo.courseDifficulty=='3'?'selected':''}>3</option>
                      </select>
                 </div>
             </div>

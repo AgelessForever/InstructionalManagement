@@ -104,7 +104,6 @@
     			
     		</div>	
     		<div class="col-sm-5">
-    			<a class="btn btn-warning" href="t_evaluation_list.html">返回上一级</a>
     			<a href="${pageContext.request.contextPath }/evaluation/t_evaluation/load.action?teacherEvaluationId=${teacherEvaluationInfo.teacherEvaluationId}" class="btn btn-success" >修改</a>
 	        	<a href="${pageContext.request.contextPath }/evaluation/t_evaluation/delete.action?teacherEvaluationId=${teacherEvaluationInfo.teacherEvaluationId}" class="btn btn-success" >删除</a>
 	        	<a href="${pageContext.request.contextPath }/evaluation/t_evaluation/list.action" class="btn btn-waring" >返回上一级</a>

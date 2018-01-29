@@ -24,7 +24,6 @@ public class CourseInfoServiceImpl implements CourseInfoService {
 		if (courseInfo != null) {
 			courseInfo.setCourseState("1");
 		}
-		System.out.println("addServiceImpl---------"+courseInfo);
 		int i = courseInfoMapper.insertSelective(courseInfo);
 		if (i > 0) {
 			return true;
@@ -35,7 +34,6 @@ public class CourseInfoServiceImpl implements CourseInfoService {
 	@Override
 	public boolean updateCourse(CourseInfo courseInfo) {
 		
-		System.out.println("updateServiceImpl---------"+courseInfo);
 		int i = courseInfoMapper.updateByPrimaryKeySelective(courseInfo);
 		if (i > 0) {
 			return true;

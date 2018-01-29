@@ -28,7 +28,7 @@
         		<div class="form-group">
             		<label class="col-sm-3 control-label">老师评价表编号</label>
                			<div class="col-sm-9">
-                			<input type="text" name="teacherEvaluationId"  readonly="readonly"  class="form-control input-sm" placeholder="请输入编号"/>
+                			<input type="text" name="teacherEvaluationId"  value="${teacherEvaluationInfo.teacherEvaluationId }"  readonly="readonly"  class="form-control input-sm" placeholder="请输入编号"/>
                 		</div>
             	</div>       
         	</div>
@@ -87,7 +87,7 @@
         	<div class="form-group">
             	<label class="col-sm-3 control-label">上课态度评价</label>
                 <div class="col-sm-9">
-               			<input type="text" name="teacherEvaluationClassAttitude" class="form-control input-sm" placeholder="该生上课态度..."/>
+               			<input type="text" name="teacherEvaluationClassAttitude" value="${teacherEvaluationInfo.teacherEvaluationClassAttitude }" class="form-control input-sm" placeholder="该生上课态度..."/>
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@
         	<div class="form-group">
             	<label class="col-sm-3 control-label">作业完成程度评价</label>
                 <div class="col-sm-9">
-               		 <input type="text" name="teacherEvaluationWorkontime" class="form-control input-sm" placeholder="他喜欢做作业吗.."/>
+               		 <input type="text" name="teacherEvaluationWorkontime" teacherEvaluationClassAttitude class="form-control input-sm" placeholder="他喜欢做作业吗.."/>
                 </div>
             </div>
 
