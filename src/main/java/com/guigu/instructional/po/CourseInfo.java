@@ -1,10 +1,17 @@
 package com.guigu.instructional.po;
 
-public class CourseInfo {
-    private Integer courseId;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
 
+
+public class CourseInfo {
+    
+	private Integer courseId;
+	
+	@NotEmpty(message="{courseInfo.name.length.error}")
     private String courseName;
 
+	@Min(value=0,message="{courseInfo.hour.amount.error}")
     private Integer courseHour;
 
     private String courseDesc;

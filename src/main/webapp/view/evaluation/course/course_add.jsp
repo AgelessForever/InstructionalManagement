@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
 <%@ taglib  uri="http://displaytag.sf.net" prefix="display" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,6 +25,18 @@
     
     
 	<div class="row">
+		<div class="col-sm-12">
+        	<div class="form-group">
+            	<!-- 显示错误信息 -->
+				<c:if test="${allErrors!=null }">
+					 <c:forEach items="${allErrors}" var="error">
+					 	<p align="center" style="color: red;">${error.defaultMessage }</p>
+					 	<br/>
+					 </c:forEach>
+				</c:if>
+            </div>
+        
+        </div>
     	<div class="col-sm-5">
         	<div class="form-group">
             	<label class="col-sm-3 control-label">课程编号</label>

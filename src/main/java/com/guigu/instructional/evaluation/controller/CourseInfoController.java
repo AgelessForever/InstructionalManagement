@@ -6,6 +6,9 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.guigu.instructional.evaluation.service.CourseInfoService;
@@ -27,7 +30,13 @@ public class CourseInfoController {
 	}
 	
 	@RequestMapping("add.action")
-	public String addCourseInfo(CourseInfo courseInfo,Model model) {
+	public String addCourseInfo(Model model,@Validated CourseInfo courseInfo,BindingResult bindingResult) {
+		if(bindingResult.hasErrors()) {
+			List<ObjectError> allErrors=bindingResult.getAllErrors();
+			model.addAttribute("allErrors", allErrors);
+			return "evaluation/course/course_add";
+		}
+		
 		boolean result = courseInfoService.addCourse(courseInfo);
 		if(result) {
 			model.addAttribute("info", "添加成功");
@@ -59,7 +68,13 @@ public class CourseInfoController {
 	
 	
 	@RequestMapping("update.action")
-	public String update(CourseInfo courseInfo,Model model) {
+	public String update(Model model,@Validated CourseInfo courseInfo,BindingResult bindingResult) {
+		if(bindingResult.hasErrors()) {
+			List<ObjectError> allErrors=bindingResult.getAllErrors();
+			model.addAttribute("allErrors", allErrors);
+			return "evaluation/course/course_update";
+		}
+		
 		boolean result=courseInfoService.updateCourse(courseInfo);
 		if(result) {
 			model.addAttribute("info", "修改成功");

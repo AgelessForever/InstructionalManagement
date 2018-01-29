@@ -64,6 +64,7 @@
 	 </bean>
 	 
 	 
+	 
 	 <!-- 全局异常处理器 -->
 	<!--  <bean class="com.guigu.ssm.exception.CustomExceptionResolver"></bean> -->
 	 
