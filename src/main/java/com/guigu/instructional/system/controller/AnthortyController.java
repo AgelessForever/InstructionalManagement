@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.guigu.instructional.po.AnthortyInfo;
 import com.guigu.instructional.system.service.AnthortyService;
+import com.guigu.instructional.system.service.RoleInfoService;
 
 @Controller
 @RequestMapping("system/anthorty")
@@ -18,9 +19,13 @@ public class AnthortyController {
 	@Resource (name = "anthortyServiceImpl")
 	private AnthortyService anthortyService;
 	
-	//权限管理列表	暂时无用
+	@Resource (name="roleInfoServiceImpl")
+	private RoleInfoService roleInfoService;
+	
+	//权限管理列表	return先返回add页面进行测试
 	@RequestMapping("list.action")
 	public String list(AnthortyInfo anthortyInfo,Model model) {
+//		System.out.println("dsadad");
 		List<AnthortyInfo> list = anthortyService.getAnthortyInfo(anthortyInfo);
 		model.addAttribute("list", list);
 		
@@ -50,8 +55,22 @@ public class AnthortyController {
 	}
 	
 	//权限管理下拉列表预加载
-//	@RequestMapping("load.action")
-//	public String load(Integer )
+	@RequestMapping("addprocess.action")
+	public String addprocess(Integer anthortyId,Model model) {
+		AnthortyInfo anthortyList = anthortyService.getAnthortyInfo(anthortyId);
+		model.addAttribute("anthortyList", anthortyList);
+		
+		return "system/anthorty/anthorty_add";
+	}
+	
+	//权限管理更新下拉列表预加载
+	/*@RequestMapping("updateprocess.action")
+	public String updateprocess(Integer anthortyId,Model model) {
+		AnthortyInfo anthortyList = anthortyService.getAnthortyInfo(anthortyId);
+		model.addAttribute("anthortyList", anthortyList);
+		
+		return "system/anthorty/anthorty_update";
+	}*/
 	
 	//权限管理更新	暂时无用
 	@RequestMapping("update.action")

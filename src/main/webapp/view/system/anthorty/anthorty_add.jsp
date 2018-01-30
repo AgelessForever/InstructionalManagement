@@ -54,8 +54,9 @@
             	<label class="col-xs-3 control-label">上级权限</label>
                 <div class="col-xs-9">
                 	<select name="anthortyDesc" class="form-control input-sm">
-                    	<option value="根目录">根目录</option>
-                        <option value="系统管理">系统管理</option>
+                    	<c:forEach items="${anthortyList}" var="anthorty">
+                     		<option value ="${anthorty.anthortyNane }">${anthorty.anthortyNane }</option>
+                     	</c:forEach>
                     </select>
                 </div>
             </div>

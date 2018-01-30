@@ -19,7 +19,9 @@
           <input type="button"   class="btn btn-success"   value="添加权限信息" onClick="javascript:window.location='anthorty_add.html'"/>
          	 <input  type="submit" class="btn btn-info" value="修改权限信息"/>
         	<input  type="submit" class="btn btn-danger" value="删除权限信息"/>
-          
+          <a class="btn btn-success" href="${pageContext.request.contextPath }/system/anthorty/addprocess.action">添加权限信息</a>
+          <%-- <a class="btn btn-info" href="${pageContext.request.contextPath }/system/anthorty/updateprocess.action">修改权限信息</a> --%>
+          <%-- <a class="btn btn-danger" href="${pageContext.request.contextPath }/system/anthorty/delete.action">删除权限信息</a> --%>
         </div>
     </div>
     <h5 class="page-header alert-info" style="padding:10px; margin:0px; margin-bottom:5px;">基本信息</h5>
@@ -28,7 +30,7 @@
         	<div class="form-group">
             	<label class="col-xs-3 control-label">权限编号</label>
                 <div class="col-xs-9">
-                	<p class="form-control-static">1001</p>
+                	<p class="form-control-static">${anthortyInfo.anthortyId }</p>
                 </div>
             </div>
         
@@ -37,7 +39,7 @@
             <div class="form-group">
             	<label class="col-xs-3 control-label">权限名称</label>
                 <div class="col-xs-9">
-                		<p class="form-control-static">程序员</p>
+                		<p class="form-control-static">${anthortyInfo.anthortyNane }</p>
                 </div>
             </div>
         </div>
@@ -47,7 +49,7 @@
         	<div class="form-group">
             	<label class="col-xs-3 control-label">上级权限</label>
                 <div class="col-xs-9">
-                	<p class="form-control-static">系统管理</p>
+                	<p class="form-control-static">${anthortyInfo.anthortyPid }</p>
                 </div>
             </div>
         
@@ -56,7 +58,7 @@
             <div class="form-group">
             	<label class="col-xs-3 control-label">权限URL</label>
                 <div class="col-xs-9">
-                	<p class="form-control-static">system/list.do</p>
+                	<p class="form-control-static">${anthortyInfo.anthortyUrl }</p>
                 </div>
             </div>
         </div>

@@ -25,7 +25,7 @@
         	 d = new dTree('d');
 			d.add(0,-1,'根目录');
             d.add(1,0,'系统管理','','提示','');
-			d.add(2,1,'员工管理','anthorty_show.html','提示','mainiframe');
+			d.add(2,1,'员工管理','${pageContext.request.contextPath}/system/staffinfo/staffinfo_list','提示','mainiframe');
 			d.add(3,1,'角色管理','anthorty_add.html','提示','mainiframe');
 			d.add(4,1,'角色变更','anthorty_add.html','提示','mainiframe');
 			d.add(5,0,'招生管理','','提示','mainiframe');
@@ -38,7 +38,7 @@
         <script type="text/javascript">
         	var height = jQuery(window).height()-50;
 			jQuery("#mainframe").attr("height",height+"px");
-        	jQuery("#mainframe").attr("src","anthorty_add.html");
+        	jQuery("#mainframe").attr("src","${pageContext.request.contextPath}/system/anthorty/anthorty_add");
         </script>
         
     </div>
