@@ -35,8 +35,8 @@
 					 </c:forEach>
 				</c:if>
             </div>
-        
         </div>
+        
     	<div class="col-sm-5">
         	<div class="form-group">
             	<label class="col-sm-3 control-label">课程编号</label>
