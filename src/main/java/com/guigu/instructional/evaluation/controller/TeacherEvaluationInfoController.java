@@ -46,11 +46,11 @@ public class TeacherEvaluationInfoController {
 	
 	@RequestMapping("add.action")
 	public String add(Model model,@Validated TeacherEvaluationInfo teacherEvaluationInfo,BindingResult bindingResult) {
-		if(bindingResult.hasErrors()) {
+		/*if(bindingResult.hasErrors()) {
 			List<ObjectError> allErrors=bindingResult.getAllErrors();
 			model.addAttribute("allErrors", allErrors);
 			return "evaluation/t_evaluation/t_evaluation_add";
-		}
+		}*/
 		
 		boolean result = teacherEvaluationInfoService.addTeacherEvaluation(teacherEvaluationInfo);
 		if(result) {
@@ -83,11 +83,11 @@ public class TeacherEvaluationInfoController {
 	
 	@RequestMapping("update.action")
 	public String update(Model model,@Validated TeacherEvaluationInfo teacherEvaluationInfo,BindingResult bindingResult) {
-		if(bindingResult.hasErrors()) {
+		/*if(bindingResult.hasErrors()) {
 			List<ObjectError> allErrors=bindingResult.getAllErrors();
 			model.addAttribute("allErrors", allErrors);
-			return "evaluation/t_evaluation/updateprocess.action?teacherEvaluationId=teacherEvaluationInfo.teacherEvaluationId";
-		}
+			return "evaluation/t_evaluation/t_evaluation_update";
+		}*/
 		
 		boolean result = teacherEvaluationInfoService.updateTeacherEvaluation(teacherEvaluationInfo);
 		if(result) {

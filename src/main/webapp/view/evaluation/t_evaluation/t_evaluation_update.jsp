@@ -25,7 +25,7 @@
     	<h5 class="page-header alert-info" style="padding:10px; margin:0px; margin-bottom:5px;">基本信息</h5>
 		<div class="row">
 		
-			<div class="col-sm-12">
+			<%-- <div class="col-sm-12">
         	<div class="form-group">
             	<!-- 显示错误信息 -->
 				<c:if test="${allErrors!=null }">
@@ -36,7 +36,7 @@
 				</c:if>
             </div>
         
-        </div>
+        	</div> --%>
 		
 		
     		<div class="col-sm-5">

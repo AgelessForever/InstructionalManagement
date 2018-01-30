@@ -7,29 +7,29 @@ public class TeacherEvaluationInfo {
 
     private Integer staffId;
     
-    @NotBlank(message="{TeacherEvaluationInfo.staffname.error}")
+    //@NotBlank(message="{TeacherEvaluationInfo.staffname.error}")
     private String staffName;
 
     private Integer studentId;
 
-    @NotBlank(message="{TeacherEvaluationInfo.studentname.error}")
+    //@NotBlank(message="{TeacherEvaluationInfo.studentname.error}")
     private String studentName;
 
     private Integer courseId;
 
-    @NotBlank(message="{TeacherEvaluationInfo.coursename.error}")
+   //@NotBlank(message="{TeacherEvaluationInfo.coursename.error}")
     private String courseName;
 
-    @NotBlank(message="{TeacherEvaluationInfo.ClassAttitude.error}")
+    //@NotBlank(message="{TeacherEvaluationInfo.ClassAttitude.error}")
     private String teacherEvaluationClassAttitude;
 
-    @NotBlank(message="{TeacherEvaluationInfo.Workontime.error}")
+    //@NotBlank(message="{TeacherEvaluationInfo.Workontime.error}")
     private String teacherEvaluationWorkontime;
 
-    @NotBlank(message="{TeacherEvaluationInfo.EvaluationBekins.error}")
+    //@NotBlank(message="{TeacherEvaluationInfo.EvaluationBekins.error}")
     private String teacherEvaluationBekins;
 
-    @NotBlank(message="{TeacherEvaluationInfo.ExtraEvaluate.error}")
+    //@NotBlank(message="{TeacherEvaluationInfo.ExtraEvaluate.error}")
     private String teacherEvaluationExtraEvaluate;
 
     private String teacherEvaluationState;
