@@ -6,6 +6,9 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.guigu.instructional.evaluation.service.CourseInfoService;
@@ -33,8 +36,7 @@ public class TeacherEvaluationInfoController {
 	
 	@RequestMapping("list.action")
 	public String list(TeacherEvaluationInfo teacherEvaluationInfo,Model model) {
-		System.out.println(teacherEvaluationInfo);
-		System.out.println(teacherEvaluationInfo.getStaffName());
+//		System.out.println(teacherEvaluationInfo);
 		List<TeacherEvaluationInfo> list = teacherEvaluationInfoService.getTeacherEvaluationInfoList(teacherEvaluationInfo);
 		model.addAttribute("list", list);
 		
@@ -43,7 +45,13 @@ public class TeacherEvaluationInfoController {
 	}
 	
 	@RequestMapping("add.action")
-	public String add(TeacherEvaluationInfo teacherEvaluationInfo,Model model) {
+	public String add(Model model,@Validated TeacherEvaluationInfo teacherEvaluationInfo,BindingResult bindingResult) {
+		if(bindingResult.hasErrors()) {
+			List<ObjectError> allErrors=bindingResult.getAllErrors();
+			model.addAttribute("allErrors", allErrors);
+			return "evaluation/t_evaluation/t_evaluation_add";
+		}
+		
 		boolean result = teacherEvaluationInfoService.addTeacherEvaluation(teacherEvaluationInfo);
 		if(result) {
 			model.addAttribute("info", "添加成功");
@@ -74,7 +82,13 @@ public class TeacherEvaluationInfoController {
 	}
 	
 	@RequestMapping("update.action")
-	public String update(TeacherEvaluationInfo teacherEvaluationInfo,Model model) {
+	public String update(Model model,@Validated TeacherEvaluationInfo teacherEvaluationInfo,BindingResult bindingResult) {
+		if(bindingResult.hasErrors()) {
+			List<ObjectError> allErrors=bindingResult.getAllErrors();
+			model.addAttribute("allErrors", allErrors);
+			return "evaluation/t_evaluation/updateprocess.action?teacherEvaluationId=teacherEvaluationInfo.teacherEvaluationId";
+		}
+		
 		boolean result = teacherEvaluationInfoService.updateTeacherEvaluation(teacherEvaluationInfo);
 		if(result) {
 			model.addAttribute("info", "修改成功");

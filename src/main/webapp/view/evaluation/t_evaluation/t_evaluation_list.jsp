@@ -17,6 +17,12 @@
     		</ul>
 		</div>
 		
+		<!-- <script type="text/javascript">
+			function query(condition){
+				$("#keyword").attr("name",condition.value);
+			}
+		</script> -->
+		
 		<script type="text/javascript">
 			function query(tecondition){
 				$("#tekeyword").attr("name",tecondition.value);
@@ -24,7 +30,28 @@
 		</script>
 
 		<div class="row alert alert-info"  style="margin:0px; padding:3px;" >
-			<form class="form-inline" action="${pageContext.request.contextPath}/evaluation/t_evaluation/list.action">
+			<form  action="${pageContext.request.contextPath}/evaluation/t_evaluation/list.action" method="post" class="form-horizontal">
+				<div class="col-sm-1" >条件:</div>
+			    <div class="col-sm-3">
+			    	<select class="form-control  input-sm" onchange="query(this)" name="tecondition">
+			        	<option value="">请选择</option>
+			        	<option value="teacherEvaluationId">编号</option>
+			            <option value="staffName">员工名称</option>
+			            <option value="studentName">学员名称</option>
+			            <option value="courseName">课程名称</option>
+			        </select>
+			    </div>
+			    <div class="col-sm-3">
+			    	<input type="text"  id="tekeyword"  class="form-control input-sm"/>
+			    </div>
+			    <input type="submit"   class="btn btn-danger"   value="查询"/>
+			    <a class="btn btn-warning" href="${pageContext.request.contextPath }/evaluation/t_evaluation/addprocess.action" paramId="teacherEvaluationId" paramProperty="teacherEvaluationId" value="添加">添加</a>
+			 </form>
+		</div>
+		
+		
+		<%-- <div class="row alert alert-info"  style="margin:0px; padding:3px;" >
+			<form action="${pageContext.request.contextPath}/evaluation/t_evaluation/list.action" method="post" class="form-horizontal">
 				<div class="col-sm-1">条件：</div>
 	     		<div class="col-sm-6">
 	     		<div class="col-sm-4">
@@ -45,7 +72,7 @@
 	    		<a class="btn btn-warning" href="${pageContext.request.contextPath }/evaluation/t_evaluation/addprocess.action" paramId="teacherEvaluationId" paramProperty="teacherEvaluationId" value="添加">添加</a>
 	    		</div>
 	    	</form>
-		</div>
+		</div> --%>
 		
 		<!-- 提示信息区域 -->
 

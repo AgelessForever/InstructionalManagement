@@ -1,23 +1,27 @@
 package com.guigu.instructional.po;
 
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 
 public class CourseInfo {
     
 	private Integer courseId;
 	
-	@NotEmpty(message="{courseInfo.name.length.error}")
+	@NotBlank(message="{courseInfo.name.length.error}")
     private String courseName;
 
-	@Min(value=0,message="{courseInfo.hour.amount.error}")
+	@Min(value=1,message="{courseInfo.hour.amount.error}")
+	@NotNull(message="{courseInfo.hour.error}")
     private Integer courseHour;
 
+	@NotBlank(message="{courseInfo.desc.error}")
     private String courseDesc;
 
     private Integer courseDifficulty;
-
+    
     private String courseState;
 
     public Integer getCourseId() {

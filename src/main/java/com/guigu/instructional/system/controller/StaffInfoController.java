@@ -47,8 +47,6 @@ public class StaffInfoController {
     
     @RequestMapping("list.action")
     public String list(StaffInfo staffInfo,Model model) {
-    	System.out.println(staffInfo);
-    	System.out.println("ÐÕÃû"+staffInfo.getStaffName());
         List<StaffInfo> list =staffInfoService.getStaffInfoList(staffInfo);
         model.addAttribute("list", list);
         

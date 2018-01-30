@@ -23,16 +23,16 @@
 		</div>
 
 		<div class="row alert alert-info"  style="margin:0px; padding:3px;" >
-			<form action="${pageContext.request.contextPath }/evaluation/course/list.action" class="form-inline">
+			<form action="${pageContext.request.contextPath }/evaluation/course/list.action" class="form-horizontal">
 
-	     		<div class="col-sm-7">
+	     		<!-- <div class="col-sm-7"> -->
 	     		<div class="col-sm-2">
 	         		<label class="" for="activename">课程名称：</label>
 	         	</div>
-	         	<div class="col-sm-10">
+	         	<div class="col-sm-3">
 	        		<input type="text" name="courseName" class="form-control" id="activename" placeholder="请输入课程名称">
 	      		</div>
-	      		</div>
+	      		<!-- </div> -->
 	
 	    		<input type="submit"   class="btn btn-danger"     value="查询"/>
 	    		<input type="button"   class="btn btn-success"   value="添加" onClick="javascript:window.location='${pageContext.request.contextPath }/view/evaluation/course/course_add.jsp'"/>

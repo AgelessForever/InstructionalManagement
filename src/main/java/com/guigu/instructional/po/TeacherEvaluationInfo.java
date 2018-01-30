@@ -1,26 +1,35 @@
 package com.guigu.instructional.po;
 
+import javax.validation.constraints.NotBlank;
+
 public class TeacherEvaluationInfo {
     private Integer teacherEvaluationId;
 
     private Integer staffId;
-
+    
+    @NotBlank(message="{TeacherEvaluationInfo.staffname.error}")
     private String staffName;
 
     private Integer studentId;
 
+    @NotBlank(message="{TeacherEvaluationInfo.studentname.error}")
     private String studentName;
 
     private Integer courseId;
 
+    @NotBlank(message="{TeacherEvaluationInfo.coursename.error}")
     private String courseName;
 
+    @NotBlank(message="{TeacherEvaluationInfo.ClassAttitude.error}")
     private String teacherEvaluationClassAttitude;
 
+    @NotBlank(message="{TeacherEvaluationInfo.Workontime.error}")
     private String teacherEvaluationWorkontime;
 
+    @NotBlank(message="{TeacherEvaluationInfo.EvaluationBekins.error}")
     private String teacherEvaluationBekins;
 
+    @NotBlank(message="{TeacherEvaluationInfo.ExtraEvaluate.error}")
     private String teacherEvaluationExtraEvaluate;
 
     private String teacherEvaluationState;

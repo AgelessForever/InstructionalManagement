@@ -25,7 +25,7 @@
 </script>
 
 <div class="row alert alert-info"  style="margin:0px; padding:3px;" >
-<form  action="${pageContext.request.contextPath}/system/staffinfo/list.action"src/main/java/com/guigu/instructional/po"" method="post" class="form-horizontal">
+<form  action="${pageContext.request.contextPath}/system/staffinfo/list.action" method="post" class="form-horizontal">
 	<div class="col-sm-1" >条件:</div>
     <div class="col-sm-3">
     	<select class="form-control  input-sm" onchange="query(this)" name="condition">
