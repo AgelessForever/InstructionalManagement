@@ -20,10 +20,10 @@ public class TeacherEvaluationInfo {
    //@NotBlank(message="{TeacherEvaluationInfo.coursename.error}")
     private String courseName;
 
-    //@NotBlank(message="{TeacherEvaluationInfo.ClassAttitude.error}")
+    @NotBlank(message="{TeacherEvaluationInfo.ClassAttitude.error}")
     private String teacherEvaluationClassAttitude;
 
-    //@NotBlank(message="{TeacherEvaluationInfo.Workontime.error}")
+    @NotBlank(message="{TeacherEvaluationInfo.Workontime.error}")
     private String teacherEvaluationWorkontime;
 
     //@NotBlank(message="{TeacherEvaluationInfo.EvaluationBekins.error}")

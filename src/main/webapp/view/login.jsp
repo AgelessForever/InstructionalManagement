@@ -31,21 +31,23 @@
 										<h4 class="header blue lighter bigger">
 											<i class="icon-coffee green"></i> 请输入您的账号和密码
 										</h4>
+										
 
 										<div class="space-6"></div>
-										<form action="${pageContext.request.contextPath}/view/index.jsp" method="post" onsubmit="return check()">
+										<form action="${pageContext.request.contextPath}/view/login.action" method="post" >
 											<fieldset>
 												<label class="block clearfix"> <span
 													class="block input-icon input-icon-right"> <input id="userId"
-														name="userId" type="text" class="form-control"
+														name="staffNumber" type="text" class="form-control"
 														placeholder="请输入账号" /> <i class="icon-user"></i>
 												</span>
 												</label> <label class="block clearfix"> <span
 													class="block input-icon input-icon-right"> <input id="userPw"
-														name="passWord" type="password" class="form-control"
+														name="staffPassword" type="password" class="form-control"
 														placeholder="请输入密码" /> <i class="icon-lock"></i>
 												</span>
 												</label>
+												<p align="center" style="color: red;">${info}</p>
 
 												<div class="clearfix">
 											

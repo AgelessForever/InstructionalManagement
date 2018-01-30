@@ -96,4 +96,28 @@ public class StaffInfoServiceImpl implements StaffInfoService {
         return staffInfoMapper.selectByPrimaryKey(staffId);
     }
 
+    
+    @Override
+    public StaffInfo getStaffInfoByNumber(StaffInfo staffInfo) {
+    	
+		if(staffInfo.getStaffNumber().trim().equals("")) {
+		return null;
+		}
+		
+    	StaffInfoExample staffInfoExample = new StaffInfoExample();
+    	Criteria criteria = staffInfoExample.createCriteria();
+    	if(staffInfo!=null) {
+    		if(staffInfo.getStaffNumber()!=null) {
+    			criteria.andStaffNumberEqualTo(staffInfo.getStaffNumber());
+    		}
+    		
+    	}
+    	try {
+    		return staffInfoMapper.selectByExample(staffInfoExample).get(0);
+		} catch (Exception e) {
+			return null;
+			
+		}
+    	
+    }
 }
