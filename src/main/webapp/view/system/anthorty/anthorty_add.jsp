@@ -53,9 +53,10 @@
         	<div class="form-group">
             	<label class="col-xs-3 control-label">上级权限</label>
                 <div class="col-xs-9">
-                	<select name="anthortyDesc" class="form-control input-sm">
+                	<select name="anthortyPid" class="form-control input-sm">
+                    		<option value ="${anthorty.anthortyId }"></option>
                     	<c:forEach items="${anthortyList}" var="anthorty">
-                     		<option value ="${anthorty.anthortyNane }">${anthorty.anthortyNane }</option>
+                     		<option value ="${anthorty.anthortyId }">${anthorty.anthortyId }</option>
                      	</c:forEach>
                     </select>
                 </div>
@@ -77,7 +78,7 @@
         	<div class="form-group">
             	<label class="col-xs-3 control-label">备注</label>
                 <div class="col-xs-9">
-                	<textarea class="form-control"></textarea>
+                	<textarea name="anthortyDesc" class="form-control"></textarea>
                 </div>
             </div>
         
@@ -88,6 +89,9 @@
     	<div class="col-xs-3 col-xs-offset-3">
         	<input  type="submit" class="btn btn-success" value="保存权限信息"/>
         </div>
+        <div class="col-sm-3">
+    		<a href="${pageContext.request.contextPath }/system/anthorty/list.action">返回上一级</a>
+    	</div>
     </div>
 
 </form>

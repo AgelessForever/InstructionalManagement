@@ -21,7 +21,7 @@
 
 
 <div class="row alert alert-info"  style="margin:0px; padding:3px;" >
-<form action="${pageContext.request.contextPath}/system/anthotychange/anthotychangelist.action" class="form-horizontal">
+<form action="${pageContext.request.contextPath}/system/anthortychange/anthortychangelist.action" class="form-horizontal">
 	<div class="col-sm-2">角色名称:</div>
     <div class="col-sm-3">
     	<input type="text" name="roleName"  class="form-control input-sm"/>
@@ -50,8 +50,8 @@
     	<display:column property="roleId" title="角色编号"></display:column>
     	<display:column property="roleName" title="角色名称"></display:column>
     	<display:column property="roleDesc" title="角色描述"></display:column>
-    	<%-- <display:column href="${pageContext.request.contextPath }/system/anthotychange/anthortychangeload.action" paramId="roleId" paramProperty="roleId" value="权限变更" title="权限变更"></display:column>
-    	 --%>
+    	<display:column href="${pageContext.request.contextPath }/system/anthortychange/anthortychangeload.action" paramId="roleId" paramProperty="roleId" value="权限变更" title="权限变更"></display:column>
+    	
     </display:table>
 </div>
 

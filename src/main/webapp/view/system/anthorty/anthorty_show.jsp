@@ -16,9 +16,6 @@
 <form action="" class="form-horizontal">
  	<div class="row">
     	<div class="col-xs-9 ">
-          <input type="button"   class="btn btn-success"   value="添加权限信息" onClick="javascript:window.location='anthorty_add.html'"/>
-         	 <input  type="submit" class="btn btn-info" value="修改权限信息"/>
-        	<input  type="submit" class="btn btn-danger" value="删除权限信息"/>
           <a class="btn btn-success" href="${pageContext.request.contextPath }/system/anthorty/addprocess.action">添加权限信息</a>
           <%-- <a class="btn btn-info" href="${pageContext.request.contextPath }/system/anthorty/updateprocess.action">修改权限信息</a> --%>
           <%-- <a class="btn btn-danger" href="${pageContext.request.contextPath }/system/anthorty/delete.action">删除权限信息</a> --%>
@@ -69,15 +66,22 @@
         	<div class="form-group">
             	<label class="col-xs-3 control-label">备注</label>
                 <div class="col-xs-9">
-                	<p class="form-control-static">查询用户信息</p>
+                	<p class="form-control-static">${anthortyInfo.anthortyDesc }</p>
                 </div>
             </div>
         
         </div>
 
     </div>
-
-
+    
+    <div class="row">
+    	<div class="col-xs-3 col-xs-offset-3">
+        	<input  type="submit" class="btn btn-success" value="保存权限信息"/>
+        </div>
+        <div class="col-sm-3">
+    		<a href="${pageContext.request.contextPath }/system/anthorty/list.action">返回上一级</a>
+    	</div>
+    </div>
 </form>
 
 </body>

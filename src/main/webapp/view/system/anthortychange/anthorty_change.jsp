@@ -17,7 +17,7 @@
     	<li><a href="#">系统管理</a></li>
         <li>权限变更</li>
     </ul>
-<form action="${pageContext.request.contextPath }/system/anthotychange/anthotychangeupdate.action" class="form-horizontal">
+<form action="${pageContext.request.contextPath }/system/anthortychange/anthortychangeupdate.action" class="form-horizontal">
 
     <h5 class="page-header alert-info" style="padding:10px; margin:0px; margin-bottom:5px;">基本信息</h5>
 	<div class="row">
@@ -25,7 +25,8 @@
         	<div class="form-group">
             	<label class="col-sm-3 control-label">角色编号</label>
                 <div class="col-sm-9">
-                	<p name="roleId" class="form-control-static">10001</p>
+                <input type="hidden" name="roleId" value="${roleInfo.roleId }">
+                	<p  class="form-control-static">${roleInfo.roleId }</p>
                 </div>
             </div>
         
@@ -34,7 +35,7 @@
             <div class="form-group">
             	<label class="col-sm-3 control-label">角色名称</label>
                 <div class="col-sm-9">
-                	<p class="form-control-static">超级管理员</p>
+                	<p  class="form-control-static">${roleInfo.roleName }</p>
                 </div>
             </div>
         </div>
@@ -152,8 +153,7 @@
        	<div class="row">
     	<div class="col-sm-5 col-sm-offset-4">
           	<input type="submit" class="btn btn-success" value="权限变更"/>
-            <a  href="anthorty_changelist.html" class="btn btn-warning">返回上一级</a>
-          
+          	<a href="${pageContext.request.contextPath }/system/anthortychange/anthortychangelist.action">返回上一级</a>
         </div>
     </div>
     

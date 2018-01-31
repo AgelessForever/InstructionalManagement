@@ -19,10 +19,8 @@ public class AnthortyController {
 	@Resource (name = "anthortyServiceImpl")
 	private AnthortyService anthortyService;
 	
-	@Resource (name="roleInfoServiceImpl")
-	private RoleInfoService roleInfoService;
 	
-	//权限管理列表	return先返回add页面进行测试
+	//权限管理列表	return先返回add页面进行添加测试
 	@RequestMapping("list.action")
 	public String list(AnthortyInfo anthortyInfo,Model model) {
 //		System.out.println("dsadad");
@@ -57,7 +55,9 @@ public class AnthortyController {
 	//权限管理下拉列表预加载
 	@RequestMapping("addprocess.action")
 	public String addprocess(Integer anthortyId,Model model) {
-		AnthortyInfo anthortyList = anthortyService.getAnthortyInfo(anthortyId);
+//		System.out.println("addprocess");
+		//查询所有的权限
+		List<AnthortyInfo> anthortyList =anthortyService.getAnthortyInfoList(null);
 		model.addAttribute("anthortyList", anthortyList);
 		
 		return "system/anthorty/anthorty_add";
@@ -73,7 +73,7 @@ public class AnthortyController {
 	}*/
 	
 	//权限管理更新	暂时无用
-	@RequestMapping("update.action")
+	/*@RequestMapping("update.action")
 	public String update(Model model,AnthortyInfo anthortyInfo) {
 		boolean result=anthortyService.updateAnthorty(anthortyInfo);
 		
@@ -84,6 +84,6 @@ public class AnthortyController {
         }
         return this.list(null, model);
 		
-	}
+	}*/
 	
 }

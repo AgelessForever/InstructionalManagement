@@ -51,7 +51,14 @@ public class AnthortyServiceImpl implements AnthortyService{
 				criteria.andAnthortyIdEqualTo(anthortyInfo.getAnthortyId());
 			}
 			
+			if(anthortyInfo.getAnthortyNane()!=null) {
+				anthortyInfo.setAnthortyNane("%"+anthortyInfo.getAnthortyNane()+"%");
+				criteria.andAnthortyNaneLike(anthortyInfo.getAnthortyNane());
+			}
+			
 		}
+		
+//		criteria.andAnthortyIdIsNotNull();
 		
 		return anthortyInfoMapper.selectByExample(anthortyInfoExample);
 	}
