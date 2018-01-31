@@ -40,7 +40,7 @@ public class AnthortyServiceImpl implements AnthortyService{
 	}
 
 	@Override
-	public List<AnthortyInfo> getAnthortyInfo(AnthortyInfo anthortyInfo) {
+	public List<AnthortyInfo> getAnthortyInfoList(AnthortyInfo anthortyInfo) {
 		
 		AnthortyInfoExample anthortyInfoExample = new AnthortyInfoExample();
 		Criteria criteria = anthortyInfoExample.createCriteria();

@@ -17,7 +17,7 @@
     	<li><a href="#">系统管理</a></li>
         <li>权限变更</li>
     </ul>
-<form action="" class="form-horizontal">
+<form action="${pageContext.request.contextPath }/system/anthotychange/anthotychangeupdate.action" class="form-horizontal">
 
     <h5 class="page-header alert-info" style="padding:10px; margin:0px; margin-bottom:5px;">基本信息</h5>
 	<div class="row">
@@ -25,7 +25,7 @@
         	<div class="form-group">
             	<label class="col-sm-3 control-label">角色编号</label>
                 <div class="col-sm-9">
-                	<p class="form-control-static">10001</p>
+                	<p name="roleId" class="form-control-static">10001</p>
                 </div>
             </div>
         

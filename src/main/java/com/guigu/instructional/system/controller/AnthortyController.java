@@ -26,7 +26,7 @@ public class AnthortyController {
 	@RequestMapping("list.action")
 	public String list(AnthortyInfo anthortyInfo,Model model) {
 //		System.out.println("dsadad");
-		List<AnthortyInfo> list = anthortyService.getAnthortyInfo(anthortyInfo);
+		List<AnthortyInfo> list = anthortyService.getAnthortyInfoList(anthortyInfo);
 		model.addAttribute("list", list);
 		
 		return "system/anthorty/anthorty_list";
@@ -85,32 +85,5 @@ public class AnthortyController {
         return this.list(null, model);
 		
 	}
-	
-	
-	//权限变更列表	待修改
-	@RequestMapping("anthortychangelist.action")
-	public String anthortyChangeList(AnthortyInfo anthortyInfo,Model model) {
-		List<AnthortyInfo> list = anthortyService.getAnthortyInfo(anthortyInfo);
-		model.addAttribute("list", list);
-		return "system/anthorty/anthorty_changelist";
-	}
-	
-//	@RequestMapping("")
-	
-	//权限变更更新	待修改
-	@RequestMapping("changeanthorty")
-	public String updateAnthortyChange(AnthortyInfo anthortyInfo,Model model) {
-		boolean result=anthortyService.updateAnthorty(anthortyInfo);
-		
-		if(result) {
-            model.addAttribute("info", "修改成功");
-        }else {
-            model.addAttribute("info", "修改失败");
-        }
-		
-		return this.anthortyChangeList(null, model);
-		
-	}
-	
 	
 }

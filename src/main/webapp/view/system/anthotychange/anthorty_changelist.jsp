@@ -18,42 +18,41 @@
         <li>权限变更</li>
     </ul>
 </div>
+
+
 <div class="row alert alert-info"  style="margin:0px; padding:3px;" >
-<form class="form-horizontal">
+<form action="${pageContext.request.contextPath}/system/anthotychange/anthotychangelist.action" class="form-horizontal">
 	<div class="col-sm-2">角色名称:</div>
     <div class="col-sm-3">
-    	<input type="text"  class="form-control input-sm"/>
+    	<input type="text" name="roleName"  class="form-control input-sm"/>
     </div>
-    <input type="button"   class="btn btn-danger"   value="查询"/>
+    <input type="submit"   class="btn btn-danger"   value="查询"/>
 
     </form>
 </div>
+
+<div align="center">
+	<div class="alert alert-warning" style="margin: 0px; padding: 5px; width: 80%;display:${empty info?'none':'block'} ">
+		<button type="button" class="close" data-dismiss="alert">
+			<span aria-hidden="true">&times;</span>
+			
+		</button>
+		<p align="center" style="color: red;">权限变更-${info}</p>
+	</div>	
+</div>
+
+
+
 <div class="row" style="padding:15px; padding-top:0px; ">
 	<table class="table  table-condensed table-striped">
-    	<tr>
-        	<th>角色编号</th>
-            <th>角色名称</th>
-            <th>角色描述</th>
-             <th>操作</th>
-        </tr>
-       	<tr>
-        	<td>1001</td>
-            <td>java工程师</td>
-            <td>天天编写代码的</td>
-            <th><a href="anthorty_change.html">权限变更</a></th>
-        </tr>       	<tr>
-        	<td>1001</td>
-            <td>java工程师</td>
-            <td>天天编写代码的</td>
-            <th><a href="anthorty_change.html">权限变更</a></th>
-        </tr>       	<tr>
-        	<td>1001</td>
-            <td>java工程师</td>
-            <td>天天编写代码的</td>
-            <th><a href="anthorty_change.html">权限变更</a></th>
-        </tr>
-          
     </table>
+    <display:table class="table table-condensed table-striped" name="list" pagesize="10" requestURI="${pageContext.request.contextPath }/system/roleinfo/list.action">
+    	<display:column property="roleId" title="角色编号"></display:column>
+    	<display:column property="roleName" title="角色名称"></display:column>
+    	<display:column property="roleDesc" title="角色描述"></display:column>
+    	<%-- <display:column href="${pageContext.request.contextPath }/system/anthotychange/anthortychangeload.action" paramId="roleId" paramProperty="roleId" value="权限变更" title="权限变更"></display:column>
+    	 --%>
+    </display:table>
 </div>
 
 </body>

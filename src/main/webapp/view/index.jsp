@@ -133,7 +133,7 @@
 									class="icon-double-angle-right"></i> 角色变更	</a></li>
                           <li><a href="${pageContext.request.contextPath}/system/anthorty/list.action" target="mainframe"> <i
 									class="icon-double-angle-right"></i> 权限管理	</a></li> 
-                         <li><a href="${pageContext.request.contextPath}/system/anthotychange/anthorty_changelist.html" target="mainframe"> <i
+                         <li><a href="${pageContext.request.contextPath}/system/anthotychange/anthotychangelist.action" target="mainframe"> <i
 									class="icon-double-angle-right"></i> 权限变更</a></li>  
    						 <li><a href="view/system/datadictionary/datadictionary_list.html" target="mainframe"> <i
 									class="icon-double-angle-right"></i> 数据字典</a></li>                                                    

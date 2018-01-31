@@ -10,7 +10,7 @@ public interface AnthortyService {
 	
 	public boolean updateAnthorty(AnthortyInfo anthortyInfo);
 	
-	public List<AnthortyInfo> getAnthortyInfo(AnthortyInfo anthortyInfo);
+	public List<AnthortyInfo> getAnthortyInfoList(AnthortyInfo anthortyInfo);
 	
 	public AnthortyInfo getAnthortyInfo(Integer anthortyId);
 	
