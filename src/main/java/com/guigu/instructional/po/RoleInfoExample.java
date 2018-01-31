@@ -373,6 +373,486 @@ public class RoleInfoExample {
             addCriterion("role_state not between", value1, value2, "roleState");
             return (Criteria) this;
         }
+
+        public Criteria andRoleAnthortyOneIsNull() {
+            addCriterion("role_anthorty_one is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyOneIsNotNull() {
+            addCriterion("role_anthorty_one is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyOneEqualTo(Integer value) {
+            addCriterion("role_anthorty_one =", value, "roleAnthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyOneNotEqualTo(Integer value) {
+            addCriterion("role_anthorty_one <>", value, "roleAnthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyOneGreaterThan(Integer value) {
+            addCriterion("role_anthorty_one >", value, "roleAnthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyOneGreaterThanOrEqualTo(Integer value) {
+            addCriterion("role_anthorty_one >=", value, "roleAnthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyOneLessThan(Integer value) {
+            addCriterion("role_anthorty_one <", value, "roleAnthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyOneLessThanOrEqualTo(Integer value) {
+            addCriterion("role_anthorty_one <=", value, "roleAnthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyOneIn(List<Integer> values) {
+            addCriterion("role_anthorty_one in", values, "roleAnthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyOneNotIn(List<Integer> values) {
+            addCriterion("role_anthorty_one not in", values, "roleAnthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyOneBetween(Integer value1, Integer value2) {
+            addCriterion("role_anthorty_one between", value1, value2, "roleAnthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyOneNotBetween(Integer value1, Integer value2) {
+            addCriterion("role_anthorty_one not between", value1, value2, "roleAnthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyTwoIsNull() {
+            addCriterion("role_anthorty_two is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyTwoIsNotNull() {
+            addCriterion("role_anthorty_two is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyTwoEqualTo(Integer value) {
+            addCriterion("role_anthorty_two =", value, "roleAnthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyTwoNotEqualTo(Integer value) {
+            addCriterion("role_anthorty_two <>", value, "roleAnthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyTwoGreaterThan(Integer value) {
+            addCriterion("role_anthorty_two >", value, "roleAnthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyTwoGreaterThanOrEqualTo(Integer value) {
+            addCriterion("role_anthorty_two >=", value, "roleAnthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyTwoLessThan(Integer value) {
+            addCriterion("role_anthorty_two <", value, "roleAnthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyTwoLessThanOrEqualTo(Integer value) {
+            addCriterion("role_anthorty_two <=", value, "roleAnthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyTwoIn(List<Integer> values) {
+            addCriterion("role_anthorty_two in", values, "roleAnthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyTwoNotIn(List<Integer> values) {
+            addCriterion("role_anthorty_two not in", values, "roleAnthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyTwoBetween(Integer value1, Integer value2) {
+            addCriterion("role_anthorty_two between", value1, value2, "roleAnthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyTwoNotBetween(Integer value1, Integer value2) {
+            addCriterion("role_anthorty_two not between", value1, value2, "roleAnthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyThreeIsNull() {
+            addCriterion("role_anthorty_three is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyThreeIsNotNull() {
+            addCriterion("role_anthorty_three is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyThreeEqualTo(Integer value) {
+            addCriterion("role_anthorty_three =", value, "roleAnthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyThreeNotEqualTo(Integer value) {
+            addCriterion("role_anthorty_three <>", value, "roleAnthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyThreeGreaterThan(Integer value) {
+            addCriterion("role_anthorty_three >", value, "roleAnthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyThreeGreaterThanOrEqualTo(Integer value) {
+            addCriterion("role_anthorty_three >=", value, "roleAnthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyThreeLessThan(Integer value) {
+            addCriterion("role_anthorty_three <", value, "roleAnthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyThreeLessThanOrEqualTo(Integer value) {
+            addCriterion("role_anthorty_three <=", value, "roleAnthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyThreeIn(List<Integer> values) {
+            addCriterion("role_anthorty_three in", values, "roleAnthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyThreeNotIn(List<Integer> values) {
+            addCriterion("role_anthorty_three not in", values, "roleAnthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyThreeBetween(Integer value1, Integer value2) {
+            addCriterion("role_anthorty_three between", value1, value2, "roleAnthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyThreeNotBetween(Integer value1, Integer value2) {
+            addCriterion("role_anthorty_three not between", value1, value2, "roleAnthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFourIsNull() {
+            addCriterion("role_anthorty_four is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFourIsNotNull() {
+            addCriterion("role_anthorty_four is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFourEqualTo(Integer value) {
+            addCriterion("role_anthorty_four =", value, "roleAnthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFourNotEqualTo(Integer value) {
+            addCriterion("role_anthorty_four <>", value, "roleAnthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFourGreaterThan(Integer value) {
+            addCriterion("role_anthorty_four >", value, "roleAnthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFourGreaterThanOrEqualTo(Integer value) {
+            addCriterion("role_anthorty_four >=", value, "roleAnthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFourLessThan(Integer value) {
+            addCriterion("role_anthorty_four <", value, "roleAnthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFourLessThanOrEqualTo(Integer value) {
+            addCriterion("role_anthorty_four <=", value, "roleAnthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFourIn(List<Integer> values) {
+            addCriterion("role_anthorty_four in", values, "roleAnthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFourNotIn(List<Integer> values) {
+            addCriterion("role_anthorty_four not in", values, "roleAnthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFourBetween(Integer value1, Integer value2) {
+            addCriterion("role_anthorty_four between", value1, value2, "roleAnthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFourNotBetween(Integer value1, Integer value2) {
+            addCriterion("role_anthorty_four not between", value1, value2, "roleAnthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFiveIsNull() {
+            addCriterion("role_anthorty_five is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFiveIsNotNull() {
+            addCriterion("role_anthorty_five is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFiveEqualTo(Integer value) {
+            addCriterion("role_anthorty_five =", value, "roleAnthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFiveNotEqualTo(Integer value) {
+            addCriterion("role_anthorty_five <>", value, "roleAnthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFiveGreaterThan(Integer value) {
+            addCriterion("role_anthorty_five >", value, "roleAnthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFiveGreaterThanOrEqualTo(Integer value) {
+            addCriterion("role_anthorty_five >=", value, "roleAnthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFiveLessThan(Integer value) {
+            addCriterion("role_anthorty_five <", value, "roleAnthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFiveLessThanOrEqualTo(Integer value) {
+            addCriterion("role_anthorty_five <=", value, "roleAnthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFiveIn(List<Integer> values) {
+            addCriterion("role_anthorty_five in", values, "roleAnthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFiveNotIn(List<Integer> values) {
+            addCriterion("role_anthorty_five not in", values, "roleAnthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFiveBetween(Integer value1, Integer value2) {
+            addCriterion("role_anthorty_five between", value1, value2, "roleAnthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyFiveNotBetween(Integer value1, Integer value2) {
+            addCriterion("role_anthorty_five not between", value1, value2, "roleAnthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySixIsNull() {
+            addCriterion("role_anthorty_six is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySixIsNotNull() {
+            addCriterion("role_anthorty_six is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySixEqualTo(Integer value) {
+            addCriterion("role_anthorty_six =", value, "roleAnthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySixNotEqualTo(Integer value) {
+            addCriterion("role_anthorty_six <>", value, "roleAnthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySixGreaterThan(Integer value) {
+            addCriterion("role_anthorty_six >", value, "roleAnthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySixGreaterThanOrEqualTo(Integer value) {
+            addCriterion("role_anthorty_six >=", value, "roleAnthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySixLessThan(Integer value) {
+            addCriterion("role_anthorty_six <", value, "roleAnthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySixLessThanOrEqualTo(Integer value) {
+            addCriterion("role_anthorty_six <=", value, "roleAnthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySixIn(List<Integer> values) {
+            addCriterion("role_anthorty_six in", values, "roleAnthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySixNotIn(List<Integer> values) {
+            addCriterion("role_anthorty_six not in", values, "roleAnthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySixBetween(Integer value1, Integer value2) {
+            addCriterion("role_anthorty_six between", value1, value2, "roleAnthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySixNotBetween(Integer value1, Integer value2) {
+            addCriterion("role_anthorty_six not between", value1, value2, "roleAnthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySevenIsNull() {
+            addCriterion("role_anthorty_seven is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySevenIsNotNull() {
+            addCriterion("role_anthorty_seven is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySevenEqualTo(Integer value) {
+            addCriterion("role_anthorty_seven =", value, "roleAnthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySevenNotEqualTo(Integer value) {
+            addCriterion("role_anthorty_seven <>", value, "roleAnthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySevenGreaterThan(Integer value) {
+            addCriterion("role_anthorty_seven >", value, "roleAnthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySevenGreaterThanOrEqualTo(Integer value) {
+            addCriterion("role_anthorty_seven >=", value, "roleAnthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySevenLessThan(Integer value) {
+            addCriterion("role_anthorty_seven <", value, "roleAnthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySevenLessThanOrEqualTo(Integer value) {
+            addCriterion("role_anthorty_seven <=", value, "roleAnthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySevenIn(List<Integer> values) {
+            addCriterion("role_anthorty_seven in", values, "roleAnthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySevenNotIn(List<Integer> values) {
+            addCriterion("role_anthorty_seven not in", values, "roleAnthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySevenBetween(Integer value1, Integer value2) {
+            addCriterion("role_anthorty_seven between", value1, value2, "roleAnthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortySevenNotBetween(Integer value1, Integer value2) {
+            addCriterion("role_anthorty_seven not between", value1, value2, "roleAnthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyEightIsNull() {
+            addCriterion("role_anthorty_eight is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyEightIsNotNull() {
+            addCriterion("role_anthorty_eight is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyEightEqualTo(Integer value) {
+            addCriterion("role_anthorty_eight =", value, "roleAnthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyEightNotEqualTo(Integer value) {
+            addCriterion("role_anthorty_eight <>", value, "roleAnthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyEightGreaterThan(Integer value) {
+            addCriterion("role_anthorty_eight >", value, "roleAnthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyEightGreaterThanOrEqualTo(Integer value) {
+            addCriterion("role_anthorty_eight >=", value, "roleAnthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyEightLessThan(Integer value) {
+            addCriterion("role_anthorty_eight <", value, "roleAnthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyEightLessThanOrEqualTo(Integer value) {
+            addCriterion("role_anthorty_eight <=", value, "roleAnthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyEightIn(List<Integer> values) {
+            addCriterion("role_anthorty_eight in", values, "roleAnthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyEightNotIn(List<Integer> values) {
+            addCriterion("role_anthorty_eight not in", values, "roleAnthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyEightBetween(Integer value1, Integer value2) {
+            addCriterion("role_anthorty_eight between", value1, value2, "roleAnthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andRoleAnthortyEightNotBetween(Integer value1, Integer value2) {
+            addCriterion("role_anthorty_eight not between", value1, value2, "roleAnthortyEight");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

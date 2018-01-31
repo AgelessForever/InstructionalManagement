@@ -7,6 +7,17 @@
     <result column="anthorty_nane" property="anthortyNane" jdbcType="VARCHAR" />
     <result column="anthorty_desc" property="anthortyDesc" jdbcType="VARCHAR" />
     <result column="anthorty_url" property="anthortyUrl" jdbcType="VARCHAR" />
+    <result column="anthorty_one" property="anthortyOne" jdbcType="INTEGER" />
+    <result column="anthorty_two" property="anthortyTwo" jdbcType="INTEGER" />
+    <result column="anthorty_three" property="anthortyThree" jdbcType="INTEGER" />
+    <result column="anthorty_four" property="anthortyFour" jdbcType="INTEGER" />
+    <result column="anthorty_five" property="anthortyFive" jdbcType="INTEGER" />
+    <result column="anthorty_six" property="anthortySix" jdbcType="INTEGER" />
+    <result column="anthorty_seven" property="anthortySeven" jdbcType="INTEGER" />
+    <result column="anthorty_eight" property="anthortyEight" jdbcType="INTEGER" />
+    <result column="anthorty_nine" property="anthortyNine" jdbcType="INTEGER" />
+    <result column="anthorty_ten" property="anthortyTen" jdbcType="INTEGER" />
+    <result column="anthorty_eleven" property="anthortyEleven" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -67,7 +78,9 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    anthorty_id, anthorty_pid, anthorty_nane, anthorty_desc, anthorty_url
+    anthorty_id, anthorty_pid, anthorty_nane, anthorty_desc, anthorty_url, anthorty_one, 
+    anthorty_two, anthorty_three, anthorty_four, anthorty_five, anthorty_six, anthorty_seven, 
+    anthorty_eight, anthorty_nine, anthorty_ten, anthorty_eleven
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.guigu.instructional.po.AnthortyInfoExample" >
     select
@@ -101,9 +114,17 @@
   </delete>
   <insert id="insert" parameterType="com.guigu.instructional.po.AnthortyInfo" >
     insert into anthorty_info (anthorty_id, anthorty_pid, anthorty_nane, 
-      anthorty_desc, anthorty_url)
+      anthorty_desc, anthorty_url, anthorty_one, 
+      anthorty_two, anthorty_three, anthorty_four, 
+      anthorty_five, anthorty_six, anthorty_seven, 
+      anthorty_eight, anthorty_nine, anthorty_ten, 
+      anthorty_eleven)
     values (#{anthortyId,jdbcType=INTEGER}, #{anthortyPid,jdbcType=INTEGER}, #{anthortyNane,jdbcType=VARCHAR}, 
-      #{anthortyDesc,jdbcType=VARCHAR}, #{anthortyUrl,jdbcType=VARCHAR})
+      #{anthortyDesc,jdbcType=VARCHAR}, #{anthortyUrl,jdbcType=VARCHAR}, #{anthortyOne,jdbcType=INTEGER}, 
+      #{anthortyTwo,jdbcType=INTEGER}, #{anthortyThree,jdbcType=INTEGER}, #{anthortyFour,jdbcType=INTEGER}, 
+      #{anthortyFive,jdbcType=INTEGER}, #{anthortySix,jdbcType=INTEGER}, #{anthortySeven,jdbcType=INTEGER}, 
+      #{anthortyEight,jdbcType=INTEGER}, #{anthortyNine,jdbcType=INTEGER}, #{anthortyTen,jdbcType=INTEGER}, 
+      #{anthortyEleven,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.guigu.instructional.po.AnthortyInfo" >
     insert into anthorty_info
@@ -123,6 +144,39 @@
       <if test="anthortyUrl != null" >
         anthorty_url,
       </if>
+      <if test="anthortyOne != null" >
+        anthorty_one,
+      </if>
+      <if test="anthortyTwo != null" >
+        anthorty_two,
+      </if>
+      <if test="anthortyThree != null" >
+        anthorty_three,
+      </if>
+      <if test="anthortyFour != null" >
+        anthorty_four,
+      </if>
+      <if test="anthortyFive != null" >
+        anthorty_five,
+      </if>
+      <if test="anthortySix != null" >
+        anthorty_six,
+      </if>
+      <if test="anthortySeven != null" >
+        anthorty_seven,
+      </if>
+      <if test="anthortyEight != null" >
+        anthorty_eight,
+      </if>
+      <if test="anthortyNine != null" >
+        anthorty_nine,
+      </if>
+      <if test="anthortyTen != null" >
+        anthorty_ten,
+      </if>
+      <if test="anthortyEleven != null" >
+        anthorty_eleven,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="anthortyId != null" >
@@ -139,6 +193,39 @@
       </if>
       <if test="anthortyUrl != null" >
         #{anthortyUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="anthortyOne != null" >
+        #{anthortyOne,jdbcType=INTEGER},
+      </if>
+      <if test="anthortyTwo != null" >
+        #{anthortyTwo,jdbcType=INTEGER},
+      </if>
+      <if test="anthortyThree != null" >
+        #{anthortyThree,jdbcType=INTEGER},
+      </if>
+      <if test="anthortyFour != null" >
+        #{anthortyFour,jdbcType=INTEGER},
+      </if>
+      <if test="anthortyFive != null" >
+        #{anthortyFive,jdbcType=INTEGER},
+      </if>
+      <if test="anthortySix != null" >
+        #{anthortySix,jdbcType=INTEGER},
+      </if>
+      <if test="anthortySeven != null" >
+        #{anthortySeven,jdbcType=INTEGER},
+      </if>
+      <if test="anthortyEight != null" >
+        #{anthortyEight,jdbcType=INTEGER},
+      </if>
+      <if test="anthortyNine != null" >
+        #{anthortyNine,jdbcType=INTEGER},
+      </if>
+      <if test="anthortyTen != null" >
+        #{anthortyTen,jdbcType=INTEGER},
+      </if>
+      <if test="anthortyEleven != null" >
+        #{anthortyEleven,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -166,6 +253,39 @@
       <if test="record.anthortyUrl != null" >
         anthorty_url = #{record.anthortyUrl,jdbcType=VARCHAR},
       </if>
+      <if test="record.anthortyOne != null" >
+        anthorty_one = #{record.anthortyOne,jdbcType=INTEGER},
+      </if>
+      <if test="record.anthortyTwo != null" >
+        anthorty_two = #{record.anthortyTwo,jdbcType=INTEGER},
+      </if>
+      <if test="record.anthortyThree != null" >
+        anthorty_three = #{record.anthortyThree,jdbcType=INTEGER},
+      </if>
+      <if test="record.anthortyFour != null" >
+        anthorty_four = #{record.anthortyFour,jdbcType=INTEGER},
+      </if>
+      <if test="record.anthortyFive != null" >
+        anthorty_five = #{record.anthortyFive,jdbcType=INTEGER},
+      </if>
+      <if test="record.anthortySix != null" >
+        anthorty_six = #{record.anthortySix,jdbcType=INTEGER},
+      </if>
+      <if test="record.anthortySeven != null" >
+        anthorty_seven = #{record.anthortySeven,jdbcType=INTEGER},
+      </if>
+      <if test="record.anthortyEight != null" >
+        anthorty_eight = #{record.anthortyEight,jdbcType=INTEGER},
+      </if>
+      <if test="record.anthortyNine != null" >
+        anthorty_nine = #{record.anthortyNine,jdbcType=INTEGER},
+      </if>
+      <if test="record.anthortyTen != null" >
+        anthorty_ten = #{record.anthortyTen,jdbcType=INTEGER},
+      </if>
+      <if test="record.anthortyEleven != null" >
+        anthorty_eleven = #{record.anthortyEleven,jdbcType=INTEGER},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -177,7 +297,18 @@
       anthorty_pid = #{record.anthortyPid,jdbcType=INTEGER},
       anthorty_nane = #{record.anthortyNane,jdbcType=VARCHAR},
       anthorty_desc = #{record.anthortyDesc,jdbcType=VARCHAR},
-      anthorty_url = #{record.anthortyUrl,jdbcType=VARCHAR}
+      anthorty_url = #{record.anthortyUrl,jdbcType=VARCHAR},
+      anthorty_one = #{record.anthortyOne,jdbcType=INTEGER},
+      anthorty_two = #{record.anthortyTwo,jdbcType=INTEGER},
+      anthorty_three = #{record.anthortyThree,jdbcType=INTEGER},
+      anthorty_four = #{record.anthortyFour,jdbcType=INTEGER},
+      anthorty_five = #{record.anthortyFive,jdbcType=INTEGER},
+      anthorty_six = #{record.anthortySix,jdbcType=INTEGER},
+      anthorty_seven = #{record.anthortySeven,jdbcType=INTEGER},
+      anthorty_eight = #{record.anthortyEight,jdbcType=INTEGER},
+      anthorty_nine = #{record.anthortyNine,jdbcType=INTEGER},
+      anthorty_ten = #{record.anthortyTen,jdbcType=INTEGER},
+      anthorty_eleven = #{record.anthortyEleven,jdbcType=INTEGER}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -197,6 +328,39 @@
       <if test="anthortyUrl != null" >
         anthorty_url = #{anthortyUrl,jdbcType=VARCHAR},
       </if>
+      <if test="anthortyOne != null" >
+        anthorty_one = #{anthortyOne,jdbcType=INTEGER},
+      </if>
+      <if test="anthortyTwo != null" >
+        anthorty_two = #{anthortyTwo,jdbcType=INTEGER},
+      </if>
+      <if test="anthortyThree != null" >
+        anthorty_three = #{anthortyThree,jdbcType=INTEGER},
+      </if>
+      <if test="anthortyFour != null" >
+        anthorty_four = #{anthortyFour,jdbcType=INTEGER},
+      </if>
+      <if test="anthortyFive != null" >
+        anthorty_five = #{anthortyFive,jdbcType=INTEGER},
+      </if>
+      <if test="anthortySix != null" >
+        anthorty_six = #{anthortySix,jdbcType=INTEGER},
+      </if>
+      <if test="anthortySeven != null" >
+        anthorty_seven = #{anthortySeven,jdbcType=INTEGER},
+      </if>
+      <if test="anthortyEight != null" >
+        anthorty_eight = #{anthortyEight,jdbcType=INTEGER},
+      </if>
+      <if test="anthortyNine != null" >
+        anthorty_nine = #{anthortyNine,jdbcType=INTEGER},
+      </if>
+      <if test="anthortyTen != null" >
+        anthorty_ten = #{anthortyTen,jdbcType=INTEGER},
+      </if>
+      <if test="anthortyEleven != null" >
+        anthorty_eleven = #{anthortyEleven,jdbcType=INTEGER},
+      </if>
     </set>
     where anthorty_id = #{anthortyId,jdbcType=INTEGER}
   </update>
@@ -205,7 +369,18 @@
     set anthorty_pid = #{anthortyPid,jdbcType=INTEGER},
       anthorty_nane = #{anthortyNane,jdbcType=VARCHAR},
       anthorty_desc = #{anthortyDesc,jdbcType=VARCHAR},
-      anthorty_url = #{anthortyUrl,jdbcType=VARCHAR}
+      anthorty_url = #{anthortyUrl,jdbcType=VARCHAR},
+      anthorty_one = #{anthortyOne,jdbcType=INTEGER},
+      anthorty_two = #{anthortyTwo,jdbcType=INTEGER},
+      anthorty_three = #{anthortyThree,jdbcType=INTEGER},
+      anthorty_four = #{anthortyFour,jdbcType=INTEGER},
+      anthorty_five = #{anthortyFive,jdbcType=INTEGER},
+      anthorty_six = #{anthortySix,jdbcType=INTEGER},
+      anthorty_seven = #{anthortySeven,jdbcType=INTEGER},
+      anthorty_eight = #{anthortyEight,jdbcType=INTEGER},
+      anthorty_nine = #{anthortyNine,jdbcType=INTEGER},
+      anthorty_ten = #{anthortyTen,jdbcType=INTEGER},
+      anthorty_eleven = #{anthortyEleven,jdbcType=INTEGER}
     where anthorty_id = #{anthortyId,jdbcType=INTEGER}
   </update>
 </mapper>

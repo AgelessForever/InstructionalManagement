@@ -433,6 +433,666 @@ public class AnthortyInfoExample {
             addCriterion("anthorty_url not between", value1, value2, "anthortyUrl");
             return (Criteria) this;
         }
+
+        public Criteria andAnthortyOneIsNull() {
+            addCriterion("anthorty_one is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyOneIsNotNull() {
+            addCriterion("anthorty_one is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyOneEqualTo(Integer value) {
+            addCriterion("anthorty_one =", value, "anthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyOneNotEqualTo(Integer value) {
+            addCriterion("anthorty_one <>", value, "anthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyOneGreaterThan(Integer value) {
+            addCriterion("anthorty_one >", value, "anthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyOneGreaterThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_one >=", value, "anthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyOneLessThan(Integer value) {
+            addCriterion("anthorty_one <", value, "anthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyOneLessThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_one <=", value, "anthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyOneIn(List<Integer> values) {
+            addCriterion("anthorty_one in", values, "anthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyOneNotIn(List<Integer> values) {
+            addCriterion("anthorty_one not in", values, "anthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyOneBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_one between", value1, value2, "anthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyOneNotBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_one not between", value1, value2, "anthortyOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTwoIsNull() {
+            addCriterion("anthorty_two is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTwoIsNotNull() {
+            addCriterion("anthorty_two is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTwoEqualTo(Integer value) {
+            addCriterion("anthorty_two =", value, "anthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTwoNotEqualTo(Integer value) {
+            addCriterion("anthorty_two <>", value, "anthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTwoGreaterThan(Integer value) {
+            addCriterion("anthorty_two >", value, "anthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTwoGreaterThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_two >=", value, "anthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTwoLessThan(Integer value) {
+            addCriterion("anthorty_two <", value, "anthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTwoLessThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_two <=", value, "anthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTwoIn(List<Integer> values) {
+            addCriterion("anthorty_two in", values, "anthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTwoNotIn(List<Integer> values) {
+            addCriterion("anthorty_two not in", values, "anthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTwoBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_two between", value1, value2, "anthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTwoNotBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_two not between", value1, value2, "anthortyTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyThreeIsNull() {
+            addCriterion("anthorty_three is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyThreeIsNotNull() {
+            addCriterion("anthorty_three is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyThreeEqualTo(Integer value) {
+            addCriterion("anthorty_three =", value, "anthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyThreeNotEqualTo(Integer value) {
+            addCriterion("anthorty_three <>", value, "anthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyThreeGreaterThan(Integer value) {
+            addCriterion("anthorty_three >", value, "anthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyThreeGreaterThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_three >=", value, "anthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyThreeLessThan(Integer value) {
+            addCriterion("anthorty_three <", value, "anthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyThreeLessThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_three <=", value, "anthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyThreeIn(List<Integer> values) {
+            addCriterion("anthorty_three in", values, "anthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyThreeNotIn(List<Integer> values) {
+            addCriterion("anthorty_three not in", values, "anthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyThreeBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_three between", value1, value2, "anthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyThreeNotBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_three not between", value1, value2, "anthortyThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFourIsNull() {
+            addCriterion("anthorty_four is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFourIsNotNull() {
+            addCriterion("anthorty_four is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFourEqualTo(Integer value) {
+            addCriterion("anthorty_four =", value, "anthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFourNotEqualTo(Integer value) {
+            addCriterion("anthorty_four <>", value, "anthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFourGreaterThan(Integer value) {
+            addCriterion("anthorty_four >", value, "anthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFourGreaterThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_four >=", value, "anthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFourLessThan(Integer value) {
+            addCriterion("anthorty_four <", value, "anthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFourLessThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_four <=", value, "anthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFourIn(List<Integer> values) {
+            addCriterion("anthorty_four in", values, "anthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFourNotIn(List<Integer> values) {
+            addCriterion("anthorty_four not in", values, "anthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFourBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_four between", value1, value2, "anthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFourNotBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_four not between", value1, value2, "anthortyFour");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFiveIsNull() {
+            addCriterion("anthorty_five is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFiveIsNotNull() {
+            addCriterion("anthorty_five is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFiveEqualTo(Integer value) {
+            addCriterion("anthorty_five =", value, "anthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFiveNotEqualTo(Integer value) {
+            addCriterion("anthorty_five <>", value, "anthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFiveGreaterThan(Integer value) {
+            addCriterion("anthorty_five >", value, "anthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFiveGreaterThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_five >=", value, "anthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFiveLessThan(Integer value) {
+            addCriterion("anthorty_five <", value, "anthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFiveLessThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_five <=", value, "anthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFiveIn(List<Integer> values) {
+            addCriterion("anthorty_five in", values, "anthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFiveNotIn(List<Integer> values) {
+            addCriterion("anthorty_five not in", values, "anthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFiveBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_five between", value1, value2, "anthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyFiveNotBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_five not between", value1, value2, "anthortyFive");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySixIsNull() {
+            addCriterion("anthorty_six is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySixIsNotNull() {
+            addCriterion("anthorty_six is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySixEqualTo(Integer value) {
+            addCriterion("anthorty_six =", value, "anthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySixNotEqualTo(Integer value) {
+            addCriterion("anthorty_six <>", value, "anthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySixGreaterThan(Integer value) {
+            addCriterion("anthorty_six >", value, "anthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySixGreaterThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_six >=", value, "anthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySixLessThan(Integer value) {
+            addCriterion("anthorty_six <", value, "anthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySixLessThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_six <=", value, "anthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySixIn(List<Integer> values) {
+            addCriterion("anthorty_six in", values, "anthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySixNotIn(List<Integer> values) {
+            addCriterion("anthorty_six not in", values, "anthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySixBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_six between", value1, value2, "anthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySixNotBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_six not between", value1, value2, "anthortySix");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySevenIsNull() {
+            addCriterion("anthorty_seven is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySevenIsNotNull() {
+            addCriterion("anthorty_seven is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySevenEqualTo(Integer value) {
+            addCriterion("anthorty_seven =", value, "anthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySevenNotEqualTo(Integer value) {
+            addCriterion("anthorty_seven <>", value, "anthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySevenGreaterThan(Integer value) {
+            addCriterion("anthorty_seven >", value, "anthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySevenGreaterThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_seven >=", value, "anthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySevenLessThan(Integer value) {
+            addCriterion("anthorty_seven <", value, "anthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySevenLessThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_seven <=", value, "anthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySevenIn(List<Integer> values) {
+            addCriterion("anthorty_seven in", values, "anthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySevenNotIn(List<Integer> values) {
+            addCriterion("anthorty_seven not in", values, "anthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySevenBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_seven between", value1, value2, "anthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortySevenNotBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_seven not between", value1, value2, "anthortySeven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyEightIsNull() {
+            addCriterion("anthorty_eight is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyEightIsNotNull() {
+            addCriterion("anthorty_eight is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyEightEqualTo(Integer value) {
+            addCriterion("anthorty_eight =", value, "anthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyEightNotEqualTo(Integer value) {
+            addCriterion("anthorty_eight <>", value, "anthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyEightGreaterThan(Integer value) {
+            addCriterion("anthorty_eight >", value, "anthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyEightGreaterThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_eight >=", value, "anthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyEightLessThan(Integer value) {
+            addCriterion("anthorty_eight <", value, "anthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyEightLessThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_eight <=", value, "anthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyEightIn(List<Integer> values) {
+            addCriterion("anthorty_eight in", values, "anthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyEightNotIn(List<Integer> values) {
+            addCriterion("anthorty_eight not in", values, "anthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyEightBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_eight between", value1, value2, "anthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyEightNotBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_eight not between", value1, value2, "anthortyEight");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyNineIsNull() {
+            addCriterion("anthorty_nine is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyNineIsNotNull() {
+            addCriterion("anthorty_nine is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyNineEqualTo(Integer value) {
+            addCriterion("anthorty_nine =", value, "anthortyNine");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyNineNotEqualTo(Integer value) {
+            addCriterion("anthorty_nine <>", value, "anthortyNine");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyNineGreaterThan(Integer value) {
+            addCriterion("anthorty_nine >", value, "anthortyNine");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyNineGreaterThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_nine >=", value, "anthortyNine");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyNineLessThan(Integer value) {
+            addCriterion("anthorty_nine <", value, "anthortyNine");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyNineLessThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_nine <=", value, "anthortyNine");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyNineIn(List<Integer> values) {
+            addCriterion("anthorty_nine in", values, "anthortyNine");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyNineNotIn(List<Integer> values) {
+            addCriterion("anthorty_nine not in", values, "anthortyNine");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyNineBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_nine between", value1, value2, "anthortyNine");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyNineNotBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_nine not between", value1, value2, "anthortyNine");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTenIsNull() {
+            addCriterion("anthorty_ten is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTenIsNotNull() {
+            addCriterion("anthorty_ten is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTenEqualTo(Integer value) {
+            addCriterion("anthorty_ten =", value, "anthortyTen");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTenNotEqualTo(Integer value) {
+            addCriterion("anthorty_ten <>", value, "anthortyTen");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTenGreaterThan(Integer value) {
+            addCriterion("anthorty_ten >", value, "anthortyTen");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTenGreaterThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_ten >=", value, "anthortyTen");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTenLessThan(Integer value) {
+            addCriterion("anthorty_ten <", value, "anthortyTen");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTenLessThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_ten <=", value, "anthortyTen");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTenIn(List<Integer> values) {
+            addCriterion("anthorty_ten in", values, "anthortyTen");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTenNotIn(List<Integer> values) {
+            addCriterion("anthorty_ten not in", values, "anthortyTen");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTenBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_ten between", value1, value2, "anthortyTen");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyTenNotBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_ten not between", value1, value2, "anthortyTen");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyElevenIsNull() {
+            addCriterion("anthorty_eleven is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyElevenIsNotNull() {
+            addCriterion("anthorty_eleven is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyElevenEqualTo(Integer value) {
+            addCriterion("anthorty_eleven =", value, "anthortyEleven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyElevenNotEqualTo(Integer value) {
+            addCriterion("anthorty_eleven <>", value, "anthortyEleven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyElevenGreaterThan(Integer value) {
+            addCriterion("anthorty_eleven >", value, "anthortyEleven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyElevenGreaterThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_eleven >=", value, "anthortyEleven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyElevenLessThan(Integer value) {
+            addCriterion("anthorty_eleven <", value, "anthortyEleven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyElevenLessThanOrEqualTo(Integer value) {
+            addCriterion("anthorty_eleven <=", value, "anthortyEleven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyElevenIn(List<Integer> values) {
+            addCriterion("anthorty_eleven in", values, "anthortyEleven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyElevenNotIn(List<Integer> values) {
+            addCriterion("anthorty_eleven not in", values, "anthortyEleven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyElevenBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_eleven between", value1, value2, "anthortyEleven");
+            return (Criteria) this;
+        }
+
+        public Criteria andAnthortyElevenNotBetween(Integer value1, Integer value2) {
+            addCriterion("anthorty_eleven not between", value1, value2, "anthortyEleven");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {
