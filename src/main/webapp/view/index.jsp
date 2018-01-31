@@ -10,7 +10,38 @@
 
 </head>
 
-<body>
+<script type="text/javascript">
+		function docheck(){
+			if(${role.roleAnthortyOne}=="0"){
+				$("#menu1").hide();
+			}
+			if(${role.roleAnthortyTwo}=="0"){
+				$("#menu2").hide();
+			}
+			if(${role.roleAnthortyThree}=="0"){
+				$("#menu3").hide();
+			}
+			if(${role.roleAnthortyFour}=="0"){
+				$("#menu4").hide();
+			}
+			if(${role.roleAnthortyFive}=="0"){
+				$("#menu5").hide();
+			}
+			if(${role.roleAnthortySix}=="0"){
+				$("#menu6").hide();
+			}
+			if(${role.roleAnthortySeven}=="0"){
+				$("#menu7").hide();
+			}
+			if(${role.roleAnthortyEight}=="0"){
+				$("#menu8").hide();
+			}
+		}
+	
+</script>
+
+
+<body onload="docheck()">
 	<div class="navbar navbar-default" id="navbar">
 		<script type="text/javascript">
 			try {
@@ -116,7 +147,7 @@
 								控制台 </span>
 					</a></li>
                     
-			    <li><a href="javascript:void(0)" target="mainframe"
+			    <li><a id="menu1" href="javascript:void(0)" target="mainframe"
 						class="dropdown-toggle"> <i class="icon-desktop"></i> <span
 							class="menu-text"> 系统管理 </span> <b class="arrow icon-angle-down"></b>
 					</a>
@@ -142,7 +173,7 @@
 									class="icon-double-angle-right"></i> 数据字典</a></li>                                                    
 						</ul>
 				</li>
-			  <li><a href="javascript:void(0)" target="mainframe"
+			  <li><a id="menu2" href="javascript:void(0)" target="mainframe"
 						class="dropdown-toggle"> <i class="icon-desktop"></i> <span
 							class="menu-text"> 营销管理 </span> <b class="arrow icon-angle-down"></b>
 					</a>
@@ -163,7 +194,7 @@
 							</a></li>                                           
 						</ul>
 				</li>
-                			  <li><a href="javascript:void(0)" target="mainframe"
+                		<li><a id="menu3"  href="javascript:void(0)" target="mainframe"
 						class="dropdown-toggle"> <i class="icon-desktop"></i> <span
 							class="menu-text"> 招生管理 </span> <b class="arrow icon-angle-down"></b>
 					</a>
@@ -185,7 +216,7 @@
 						</ul>
 				</li>
                 
-               <li><a href="javascript:void(0)" target="mainframe"
+               <li><a id="menu4" href="javascript:void(0)" target="mainframe"
 						class="dropdown-toggle"> <i class="icon-desktop"></i> <span
 							class="menu-text"> 班级管理 </span> <b class="arrow icon-angle-down"></b>
 					</a>
@@ -209,7 +240,7 @@
 							</a></li>                                                           
 						</ul>
 				</li>
-                           <li><a href="javascript:void(0)" target="mainframe"
+                           <li><a id="menu5" href="javascript:void(0)" target="mainframe"
 						class="dropdown-toggle"> <i class="icon-desktop"></i> <span
 							class="menu-text"> 学员管理 </span> <b class="arrow icon-angle-down"></b>
 					</a>
@@ -230,7 +261,7 @@
 						</ul>
 				</li>
                 
-                   <li><a href="javascript:void(0)" target="mainframe"
+                   <li><a id="menu6" href="javascript:void(0)" target="mainframe"
 						class="dropdown-toggle"> <i class="icon-desktop"></i> <span
 							class="menu-text"> 教务管理 </span> <b class="arrow icon-angle-down"></b>
 					</a>
@@ -246,7 +277,7 @@
 						</ul>
 				</li>
                 
-                        <li><a href="javascript:void(0)" target="mainframe"
+                        <li><a id="menu7" href="javascript:void(0)" target="mainframe"
 						class="dropdown-toggle"> <i class="icon-desktop"></i> <span
 							class="menu-text"> 财务管理 </span> <b class="arrow icon-angle-down"></b>
 					</a>
@@ -262,7 +293,7 @@
 						</ul>
 				</li>
 				
-				<li><a href="javascript:void(0)" target="mainframe"
+				<li><a id="menu8" href="javascript:void(0)" target="mainframe"
 						class="dropdown-toggle"> <i class="icon-desktop"></i> <span
 							class="menu-text"> 评价管理 </span> <b class="arrow icon-angle-down"></b>
 					</a>

@@ -93,9 +93,11 @@
         </td>
     </tr>
     <tr>
+    
+    <tr>
     	<td>
         	<label class="checkbox-inline">
-        	<label>财务管理</label>
+        	<label>教务管理</label>
             	<input type="radio" name="roleAnthortySix" ${roleInfo.roleAnthortySix==1?'checked':'' } value="1">是
             	<input type="radio" name="roleAnthortySix" ${roleInfo.roleAnthortySix==0?'checked':'' } value="0">否
              </label>
@@ -104,9 +106,19 @@
     <tr>
     	<td>
         	<label class="checkbox-inline">
-        	<label>评价管理</label>
+        	<label>财务管理</label>
             	<input type="radio" name="roleAnthortySeven" ${roleInfo.roleAnthortySeven==1?'checked':'' } value="1">是
             	<input type="radio" name="roleAnthortySeven" ${roleInfo.roleAnthortySeven==0?'checked':'' } value="0">否
+             </label>
+        </td>
+    </tr>
+    
+    <tr>
+    	<td>
+        	<label class="checkbox-inline">
+        	<label>评价管理</label>
+            	<input type="radio" name="roleAnthortyEight" ${roleInfo.roleAnthortyEight==1?'checked':'' } value="1">是
+            	<input type="radio" name="roleAnthortyEight" ${roleInfo.roleAnthortyEight==0?'checked':'' } value="0">否
              </label>
         </td>
     </tr>
