@@ -52,7 +52,7 @@
         	<label class="checkbox-inline">
         		<label>系统管理</label>
             	<input type="radio" name="roleAnthortyOne" ${roleInfo.roleAnthortyOne==1?'checked':'' } value="1">是
-            	<input type="radio" name="roleAnthortyOne" ${roleInfo.roleAnthortyOne==0?'checked':'' }value="0">否
+            	<input type="radio" name="roleAnthortyOne" ${roleInfo.roleAnthortyOne==0?'checked':'' } value="0">否
              </label>
         </td>
     </tr>    
@@ -61,7 +61,7 @@
         	<label class="checkbox-inline">
         	<label>营销管理</label>
             	<input type="radio" name="roleAnthortyTwo" ${roleInfo.roleAnthortyTwo==1?'checked':'' } value="1">是
-            	<input type="radio" name="roleAnthortyTwo" ${roleInfo.roleAnthortyTwo==0?'checked':'' }value="0">否
+            	<input type="radio" name="roleAnthortyTwo" ${roleInfo.roleAnthortyTwo==0?'checked':'' } value="0">否
              </label>
         </td>
     </tr>    
@@ -140,10 +140,14 @@
   
   </table>   
        	<div class="row">
-    	<div class="col-sm-5 col-sm-offset-4">
+    	<div class="col-sm-3"></div>
+    	<div class="col-sm-3">
           	<input type="submit" class="btn btn-success" value="权限变更"/>
-          	<a href="${pageContext.request.contextPath }/system/anthortychange/anthortychangelist.action">返回上一级</a>
         </div>
+        <div class="col-sm-3">
+          	<a class="btn btn-warning" href="${pageContext.request.contextPath }/system/anthortychange/anthortychangelist.action">返回上一级</a>
+        </div>
+        <div class="col-sm-3"></div>
     </div>
     
 </form>        

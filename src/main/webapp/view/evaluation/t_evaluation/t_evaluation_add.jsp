@@ -146,7 +146,7 @@
     		<input id="cy" type="submit" class="btn btn-success" value="保存"/>
     	</div>
     	<div class="col-sm-3">
-    		<a href="${pageContext.request.contextPath }/evaluation/t_evaluation/list.action">返回上一级</a>
+    		<a class="btn btn-warning" href="${pageContext.request.contextPath }/evaluation/t_evaluation/list.action">返回上一级</a>
     	</div>
     	<div class="col-sm-3"></div>
     	

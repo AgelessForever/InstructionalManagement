@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.guigu.instructional.po.AnthortyInfo;
 import com.guigu.instructional.po.AnthortyInfoExample;
+import com.guigu.instructional.po.RoleAnthortyInfoExample;
 import com.guigu.instructional.po.AnthortyInfoExample.Criteria;
 import com.guigu.instructional.system.mapper.AnthortyInfoMapper;
 import com.guigu.instructional.system.service.AnthortyService;
@@ -66,6 +67,17 @@ public class AnthortyServiceImpl implements AnthortyService{
 	@Override
 	public AnthortyInfo getAnthortyInfo(Integer anthortyId) {
 		return anthortyInfoMapper.selectByPrimaryKey(anthortyId);
+	}
+
+	@Override
+	public List<AnthortyInfo> getAnthortyByAnthortyId(Integer anthortyId) {
+		AnthortyInfoExample anthortyInfoExample = new AnthortyInfoExample();
+		Criteria criteria = anthortyInfoExample.createCriteria();
+		
+		
+		criteria.andAnthortyIdEqualTo(anthortyId);
+		
+		return anthortyInfoMapper.selectByExample(anthortyInfoExample);
 	}
 
 }

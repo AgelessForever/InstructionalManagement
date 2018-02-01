@@ -52,7 +52,7 @@ public class AnthortyController {
 		
 	}
 	
-	//权限管理下拉列表预加载
+	//权限管理	增加		下拉列表预加载
 	@RequestMapping("addprocess.action")
 	public String addprocess(Integer anthortyId,Model model) {
 //		System.out.println("addprocess");

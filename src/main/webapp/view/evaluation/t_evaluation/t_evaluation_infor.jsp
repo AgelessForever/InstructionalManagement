@@ -106,7 +106,7 @@
     		<div class="col-sm-5">
     			<a href="${pageContext.request.contextPath }/evaluation/t_evaluation/updateprocess.action?teacherEvaluationId=${teacherEvaluationInfo.teacherEvaluationId}" class="btn btn-success" >修改</a>
 	        	<a href="${pageContext.request.contextPath }/evaluation/t_evaluation/delete.action?teacherEvaluationId=${teacherEvaluationInfo.teacherEvaluationId}" class="btn btn-success" >删除</a>
-	        	<a href="${pageContext.request.contextPath }/evaluation/t_evaluation/list.action" class="btn btn-waring" >返回上一级</a>
+	        	<a href="${pageContext.request.contextPath }/evaluation/t_evaluation/list.action" class="btn btn-warning" >返回上一级</a>
     		</div>
     	</div>
     	

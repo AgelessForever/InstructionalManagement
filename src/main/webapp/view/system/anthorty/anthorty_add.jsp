@@ -86,12 +86,14 @@
 
     </div>
  	<div class="row">
-    	<div class="col-xs-3 col-xs-offset-3">
+    	<div class="col-sm-3"></div>
+    	<div class="col-sm-3">
         	<input  type="submit" class="btn btn-success" value="保存权限信息"/>
         </div>
         <div class="col-sm-3">
-    		<a href="${pageContext.request.contextPath }/system/anthorty/list.action">返回上一级</a>
+    		<a class="btn btn-warning" href="${pageContext.request.contextPath }/system/anthorty/list.action">返回上一级</a>
     	</div>
+    	<div class="col-sm-3"></div>
     </div>
 
 </form>
