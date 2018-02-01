@@ -47,8 +47,12 @@ public class RoleAnthortyServiceImpl implements RoleAnthortyService{
 		Criteria criteria = roleAnthortyInfoExample.createCriteria();
 		
 		if(roleAnthortyInfo!=null) {
-			if(roleAnthortyInfo.getRoleId()!=null) {
-				criteria.andAnthortyIdEqualTo(roleAnthortyInfo.getAnthortyId());
+			/*if(roleAnthortyInfo.getRoleId()!=null) {
+				criteria.andRoleIdEqualTo(roleAnthortyInfo.getRoleId());
+			}*/
+			
+			if(roleAnthortyInfo.getRoleAnthortyId()!=null) {
+				criteria.andRoleAnthortyIdEqualTo(roleAnthortyInfo.getRoleAnthortyId());
 			}
 		}
 		
@@ -58,6 +62,18 @@ public class RoleAnthortyServiceImpl implements RoleAnthortyService{
 	@Override
 	public RoleAnthortyInfo getRoleAnthorty(Integer roleAnthortyId) {
 		return roleAnthortyInfoMapper.selectByPrimaryKey(roleAnthortyId);
+	}
+
+	@Override
+	public List<RoleAnthortyInfo> getRoleAnthortyByRoleId(Integer roleId) {
+		
+		RoleAnthortyInfoExample roleAnthortyInfoExample = new RoleAnthortyInfoExample();
+		Criteria criteria = roleAnthortyInfoExample.createCriteria();
+		
+		
+		criteria.andRoleIdEqualTo(roleId);
+		
+		return roleAnthortyInfoMapper.selectByExample(roleAnthortyInfoExample);
 	}
 	
 }

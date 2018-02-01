@@ -14,4 +14,6 @@ public interface RoleAnthortyService {
 	
 	public RoleAnthortyInfo getRoleAnthorty(Integer roleAnthortyId);
 	
+	public List<RoleAnthortyInfo> getRoleAnthortyByRoleId(Integer roleId);
+	
 }
